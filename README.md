@@ -31,7 +31,7 @@ curl -F "file=@/path/to/file" http://localhost:5000/whisper
 or
 
 ```shell
-python ./containers/whisper-server/whisper_client.py -f <audio file.was> -u http://localhost:5000/whisper
+python ./containers/whisper-server/whisper_client.py -f <audio file.wav> -u http://localhost:5000/whisper
 ```
 
 If you want to build your own container, please
