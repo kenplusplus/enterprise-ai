@@ -1,4 +1,4 @@
-# Home AI
+# Enterprise AI
 
 ## 1. Setup TTS (Text-To-Speech) Server
 
