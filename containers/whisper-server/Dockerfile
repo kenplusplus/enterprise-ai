@@ -5,7 +5,7 @@ WORKDIR /python-docker
 RUN apt-get update && apt-get install git -y ffmpeg wget
 
 COPY requirements.txt requirements.txt
-RUN pip3 install -r requirements.txt
+RUN pip3 install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 RUN pip3 install "git+https://github.com/openai/whisper.git"
 
 COPY . .
