@@ -2,7 +2,9 @@
 
 ![](docs/pipeline-overview.png)
 
-## 1. Setup TTS (Text-To-Speech) Server
+## 1. Quick Start
+
+### 1.1 Setup TTS (Text-To-Speech) Server
 
 Use [OpenTTS](https://github.com/synesthesiam/opentts) setup the TTS server
 
@@ -17,7 +19,7 @@ You can access via:
 | Web UI | http://localhost:5500/ |
 | API | https://github.com/synesthesiam/opentts?tab=readme-ov-file#http-api-endpoints |
 
-## 2. Setup ASR(Automatic Speech Recognition) Server
+### 1.2 Setup ASR(Automatic Speech Recognition) Server
 
 ```shell
 docker pull bluewish/ken-whisper-server:latest
@@ -41,4 +43,12 @@ If you want to build your own container, please
 ```shell
 cd containers/whisper-server
 docker build -t ken-whisper-server .
+```
+
+## 2. Develop
+
+### 2.1 Build Container
+
+```shell
+./containers/build.sh
 ```
