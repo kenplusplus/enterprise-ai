@@ -1,5 +1,7 @@
 # Enterprise AI
 
+![](docs/pipeline-overview.png)
+
 ## 1. Setup TTS (Text-To-Speech) Server
 
 Use [OpenTTS](https://github.com/synesthesiam/opentts) setup the TTS server
