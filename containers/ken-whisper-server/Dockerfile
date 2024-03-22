@@ -17,12 +17,16 @@ FROM ipex_base
 WORKDIR /python-docker
 
 COPY . .
-RUN pip3 install -r requirements.txt -i https://mirrors.bfsu.edu.cn/pypi/web/simple/
+
+ENV PIP_MIRROR=""
+RUN pip3 install -r requirements.txt ${PIP_MIRROR}
 RUN pip3 install ./whisper/
+
+RUN apt-get install procps -y
 
 # Download the pre-trained model
 
 ENV FLASK_APP=app.py
 EXPOSE 5000
 
-CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
+CMD [ "./start.sh"]
