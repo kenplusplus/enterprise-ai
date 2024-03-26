@@ -85,6 +85,7 @@ function build_a_image {
         "--build-arg" "https_proxy"
         "--build-arg" "no_proxy"
         "--build-arg" "pip_mirror"
+        "--build-arg" "hf_token"
         "-f" "${container_directory}/${img_container}/Dockerfile"
         .
         "--tag" "${registry}/${img_container}:${tag}"
