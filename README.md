@@ -33,11 +33,30 @@ Then you can use following approach to test ASR server:
 curl -F "file=@/path/to/file" http://localhost:5000/whisper
 ```
 
+_NOTE: You can replace /path/to/file to [example file](./containers/ken-whisper-server/test22.wav)._
+
 or
 
 ```shell
 python ./containers/whisper-server/whisper_client.py -f <audio file.wav> -u http://localhost:5000/whisper
 ```
+
+### 1.3 Run WhisperX (ASR + Diarize + Alignment) Server
+
+```shell
+docker pull bluewish/ken-whisperx-server:latest
+docker run -it -p 5000:5000 bluewish/ken-whisperx-server
+```
+
+Then you can use following approach to test `whisperx` server:
+
+```shell
+curl -F "file=@/path/to/file" http://localhost:5000/whisper
+```
+
+_NOTE: You can replace /path/to/file to [example file](./containers/ken-whisperx-server/1101_515185834Y.mp3)._
+
+The example output is at [example_output.json](./containers/ken-whisperx-server/example_output.json)
 
 ## 2. Develop
 

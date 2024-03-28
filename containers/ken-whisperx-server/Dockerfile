@@ -27,6 +27,8 @@ RUN wget -O ~/.cache/torch/whisperx-vad-segmentation.bin \
         https://whisperx.s3.eu-west-2.amazonaws.com/model_weights/segmentation/0b5b3216d60a2d32fc086b47ea8c67589aaeb26b7e07fcbe620d6d0b83e209ea/pytorch_model.bin
 RUN wget -O ~/.cache/torch/hub/checkpoints/wav2vec2_fairseq_large_lv60k_asr_ls960.pth \
         https://download.pytorch.org/torchaudio/models/wav2vec2_fairseq_large_lv60k_asr_ls960.pth
+RUN wget -O ~/.cache/torch/hub/checkpoints/wav2vec2_fairseq_base_ls960_asr_ls960.pth \
+        https://download.pytorch.org/torchaudio/models/wav2vec2_fairseq_base_ls960_asr_ls960.pth
 
 # ===
 
@@ -36,4 +38,12 @@ ARG pip_mirror=""
 
 WORKDIR /app/
 COPY . .
+RUN pip3 install flask
 RUN pip3 install ./whisperx/ ${pip_mirror}
+
+RUN apt-get install procps -y
+
+ENV FLASK_APP=app.py
+EXPOSE 5000
+
+CMD [ "./start.sh"]
