@@ -1,0 +1,2090 @@
+{
+        "results": [
+                {
+                        "filename": "file",
+                        "segments": [
+                                {
+                                        "end": 11.71,
+                                        "speaker": "SPEAKER_00",
+                                        "start": 1.587,
+                                        "text": " CONVERSATION II Miss Jones, could you tell me more about your first job with hotel marketing concepts?",
+                                        "words": [
+                                                {
+                                                        "end": 2.447,
+                                                        "score": 0.897,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 1.587,
+                                                        "word": "CONVERSATION"
+                                                },
+                                                {
+                                                        "end": 3.127,
+                                                        "score": 0.426,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 2.467,
+                                                        "word": "II"
+                                                },
+                                                {
+                                                        "end": 5.588,
+                                                        "score": 0.776,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 5.348,
+                                                        "word": "Miss"
+                                                },
+                                                {
+                                                        "end": 6.148,
+                                                        "score": 0.687,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 5.648,
+                                                        "word": "Jones,"
+                                                },
+                                                {
+                                                        "end": 6.828,
+                                                        "score": 0.883,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 6.648,
+                                                        "word": "could"
+                                                },
+                                                {
+                                                        "end": 7.009,
+                                                        "score": 0.696,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 6.868,
+                                                        "word": "you"
+                                                },
+                                                {
+                                                        "end": 7.249,
+                                                        "score": 0.822,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 7.049,
+                                                        "word": "tell"
+                                                },
+                                                {
+                                                        "end": 7.429,
+                                                        "score": 0.813,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 7.289,
+                                                        "word": "me"
+                                                },
+                                                {
+                                                        "end": 7.929,
+                                                        "score": 0.766,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 7.589,
+                                                        "word": "more"
+                                                },
+                                                {
+                                                        "end": 8.289,
+                                                        "score": 0.876,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 8.009,
+                                                        "word": "about"
+                                                },
+                                                {
+                                                        "end": 8.549,
+                                                        "score": 0.765,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 8.349,
+                                                        "word": "your"
+                                                },
+                                                {
+                                                        "end": 8.969,
+                                                        "score": 0.802,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 8.649,
+                                                        "word": "first"
+                                                },
+                                                {
+                                                        "end": 9.389,
+                                                        "score": 0.885,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 9.049,
+                                                        "word": "job"
+                                                },
+                                                {
+                                                        "end": 9.709,
+                                                        "score": 0.942,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 9.489,
+                                                        "word": "with"
+                                                },
+                                                {
+                                                        "end": 10.469,
+                                                        "score": 0.851,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 9.989,
+                                                        "word": "hotel"
+                                                },
+                                                {
+                                                        "end": 11.05,
+                                                        "score": 0.936,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 10.57,
+                                                        "word": "marketing"
+                                                },
+                                                {
+                                                        "end": 11.71,
+                                                        "score": 0.825,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 11.13,
+                                                        "word": "concepts?"
+                                                }
+                                        ]
+                                },
+                                {
+                                        "end": 13.69,
+                                        "speaker": "SPEAKER_02",
+                                        "start": 12.73,
+                                        "text": "Yes, certainly.",
+                                        "words": [
+                                                {
+                                                        "end": 13.07,
+                                                        "score": 0.813,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 12.73,
+                                                        "word": "Yes,"
+                                                },
+                                                {
+                                                        "end": 13.69,
+                                                        "score": 0.867,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 13.19,
+                                                        "word": "certainly."
+                                                }
+                                        ]
+                                },
+                                {
+                                        "end": 20.112,
+                                        "speaker": "SPEAKER_02",
+                                        "start": 13.71,
+                                        "text": "I was a marketing consultant, responsible for marketing ten UK hotels.",
+                                        "words": [
+                                                {
+                                                        "end": 13.73,
+                                                        "score": 0.0,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 13.71,
+                                                        "word": "I"
+                                                },
+                                                {
+                                                        "end": 14.691,
+                                                        "score": 0.703,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 14.531,
+                                                        "word": "was"
+                                                },
+                                                {
+                                                        "end": 14.771,
+                                                        "score": 0.497,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 14.731,
+                                                        "word": "a"
+                                                },
+                                                {
+                                                        "end": 15.391,
+                                                        "score": 0.878,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 14.831,
+                                                        "word": "marketing"
+                                                },
+                                                {
+                                                        "end": 16.151,
+                                                        "score": 0.851,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 15.471,
+                                                        "word": "consultant,"
+                                                },
+                                                {
+                                                        "end": 17.571,
+                                                        "score": 0.894,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 16.751,
+                                                        "word": "responsible"
+                                                },
+                                                {
+                                                        "end": 17.812,
+                                                        "score": 0.751,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 17.671,
+                                                        "word": "for"
+                                                },
+                                                {
+                                                        "end": 18.372,
+                                                        "score": 0.828,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 17.872,
+                                                        "word": "marketing"
+                                                },
+                                                {
+                                                        "end": 18.892,
+                                                        "score": 0.81,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 18.512,
+                                                        "word": "ten"
+                                                },
+                                                {
+                                                        "end": 19.472,
+                                                        "score": 0.71,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 19.112,
+                                                        "word": "UK"
+                                                },
+                                                {
+                                                        "end": 20.112,
+                                                        "score": 0.768,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 19.532,
+                                                        "word": "hotels."
+                                                }
+                                        ]
+                                },
+                                {
+                                        "end": 27.054,
+                                        "speaker": "SPEAKER_02",
+                                        "start": 20.912,
+                                        "text": "They were all luxury hotels in the leisure sector, all of a very high standard.",
+                                        "words": [
+                                                {
+                                                        "end": 21.072,
+                                                        "score": 0.796,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 20.912,
+                                                        "word": "They"
+                                                },
+                                                {
+                                                        "end": 21.272,
+                                                        "score": 0.713,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 21.112,
+                                                        "word": "were"
+                                                },
+                                                {
+                                                        "end": 21.473,
+                                                        "score": 0.833,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 21.332,
+                                                        "word": "all"
+                                                },
+                                                {
+                                                        "end": 22.093,
+                                                        "score": 0.84,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 21.573,
+                                                        "word": "luxury"
+                                                },
+                                                {
+                                                        "end": 22.673,
+                                                        "score": 0.765,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 22.153,
+                                                        "word": "hotels"
+                                                },
+                                                {
+                                                        "end": 23.333,
+                                                        "score": 0.994,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 23.253,
+                                                        "word": "in"
+                                                },
+                                                {
+                                                        "end": 23.453,
+                                                        "score": 0.798,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 23.373,
+                                                        "word": "the"
+                                                },
+                                                {
+                                                        "end": 23.853,
+                                                        "score": 0.856,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 23.513,
+                                                        "word": "leisure"
+                                                },
+                                                {
+                                                        "end": 24.353,
+                                                        "score": 0.883,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 23.913,
+                                                        "word": "sector,"
+                                                },
+                                                {
+                                                        "end": 25.574,
+                                                        "score": 0.762,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 25.414,
+                                                        "word": "all"
+                                                },
+                                                {
+                                                        "end": 25.794,
+                                                        "score": 0.827,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 25.714,
+                                                        "word": "of"
+                                                },
+                                                {
+                                                        "end": 25.894,
+                                                        "score": 0.99,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 25.874,
+                                                        "word": "a"
+                                                },
+                                                {
+                                                        "end": 26.294,
+                                                        "score": 0.784,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 25.994,
+                                                        "word": "very"
+                                                },
+                                                {
+                                                        "end": 26.534,
+                                                        "score": 0.872,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 26.354,
+                                                        "word": "high"
+                                                },
+                                                {
+                                                        "end": 27.054,
+                                                        "score": 0.86,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 26.574,
+                                                        "word": "standard."
+                                                }
+                                        ]
+                                },
+                                {
+                                        "end": 30.175,
+                                        "speaker": "SPEAKER_00",
+                                        "start": 27.814,
+                                        "text": "Which markets were you responsible for?",
+                                        "words": [
+                                                {
+                                                        "end": 28.054,
+                                                        "score": 0.911,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 27.814,
+                                                        "word": "Which"
+                                                },
+                                                {
+                                                        "end": 28.755,
+                                                        "score": 0.914,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 28.234,
+                                                        "word": "markets"
+                                                },
+                                                {
+                                                        "end": 29.015,
+                                                        "score": 0.39,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 28.815,
+                                                        "word": "were"
+                                                },
+                                                {
+                                                        "end": 29.235,
+                                                        "score": 0.895,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 29.075,
+                                                        "word": "you"
+                                                },
+                                                {
+                                                        "end": 29.955,
+                                                        "score": 0.804,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 29.295,
+                                                        "word": "responsible"
+                                                },
+                                                {
+                                                        "end": 30.175,
+                                                        "score": 0.845,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 30.015,
+                                                        "word": "for?"
+                                                }
+                                        ]
+                                },
+                                {
+                                        "end": 32.175,
+                                        "speaker": "SPEAKER_02",
+                                        "start": 30.774,
+                                        "text": " for Europe and Japan.",
+                                        "words": [
+                                                {
+                                                        "end": 31.014,
+                                                        "score": 0.747,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 30.774,
+                                                        "word": "for"
+                                                },
+                                                {
+                                                        "end": 31.534,
+                                                        "score": 0.839,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 31.234,
+                                                        "word": "Europe"
+                                                },
+                                                {
+                                                        "end": 31.674,
+                                                        "score": 0.217,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 31.594,
+                                                        "word": "and"
+                                                },
+                                                {
+                                                        "end": 32.175,
+                                                        "score": 0.852,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 31.734,
+                                                        "word": "Japan."
+                                                }
+                                        ]
+                                },
+                                {
+                                        "end": 36.457,
+                                        "speaker": "SPEAKER_00",
+                                        "start": 32.195,
+                                        "text": "I see from your resume that you speak Japanese.",
+                                        "words": [
+                                                {
+                                                        "end": 32.215,
+                                                        "score": 0.0,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 32.195,
+                                                        "word": "I"
+                                                },
+                                                {
+                                                        "end": 33.635,
+                                                        "score": 0.918,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 33.375,
+                                                        "word": "see"
+                                                },
+                                                {
+                                                        "end": 33.875,
+                                                        "score": 0.772,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 33.695,
+                                                        "word": "from"
+                                                },
+                                                {
+                                                        "end": 34.116,
+                                                        "score": 0.8,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 33.935,
+                                                        "word": "your"
+                                                },
+                                                {
+                                                        "end": 34.916,
+                                                        "score": 0.646,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 34.196,
+                                                        "word": "resume"
+                                                },
+                                                {
+                                                        "end": 35.176,
+                                                        "score": 0.738,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 34.996,
+                                                        "word": "that"
+                                                },
+                                                {
+                                                        "end": 35.376,
+                                                        "score": 0.897,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 35.216,
+                                                        "word": "you"
+                                                },
+                                                {
+                                                        "end": 35.696,
+                                                        "score": 0.881,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 35.416,
+                                                        "word": "speak"
+                                                },
+                                                {
+                                                        "end": 36.457,
+                                                        "score": 0.837,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 35.836,
+                                                        "word": "Japanese."
+                                                }
+                                        ]
+                                },
+                                {
+                                        "end": 38.597,
+                                        "speaker": "SPEAKER_00",
+                                        "start": 37.297,
+                                        "text": "Have you ever been to Japan?",
+                                        "words": [
+                                                {
+                                                        "end": 37.417,
+                                                        "score": 0.915,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 37.297,
+                                                        "word": "Have"
+                                                },
+                                                {
+                                                        "end": 37.557,
+                                                        "score": 0.998,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 37.457,
+                                                        "word": "you"
+                                                },
+                                                {
+                                                        "end": 37.777,
+                                                        "score": 0.788,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 37.617,
+                                                        "word": "ever"
+                                                },
+                                                {
+                                                        "end": 38.037,
+                                                        "score": 0.883,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 37.817,
+                                                        "word": "been"
+                                                },
+                                                {
+                                                        "end": 38.197,
+                                                        "score": 0.84,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 38.077,
+                                                        "word": "to"
+                                                },
+                                                {
+                                                        "end": 38.597,
+                                                        "score": 0.853,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 38.237,
+                                                        "word": "Japan?"
+                                                }
+                                        ]
+                                },
+                                {
+                                        "end": 40.198,
+                                        "speaker": "SPEAKER_02",
+                                        "start": 39.258,
+                                        "text": "Yes, I have.",
+                                        "words": [
+                                                {
+                                                        "end": 39.598,
+                                                        "score": 0.747,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 39.258,
+                                                        "word": "Yes,"
+                                                },
+                                                {
+                                                        "end": 39.818,
+                                                        "score": 0.998,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 39.758,
+                                                        "word": "I"
+                                                },
+                                                {
+                                                        "end": 40.198,
+                                                        "score": 0.738,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 39.878,
+                                                        "word": "have."
+                                                }
+                                        ]
+                                },
+                                {
+                                        "end": 42.419,
+                                        "speaker": "SPEAKER_02",
+                                        "start": 40.778,
+                                        "text": "I spent a month in Japan in 2006.",
+                                        "words": [
+                                                {
+                                                        "end": 40.878,
+                                                        "score": 0.807,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 40.778,
+                                                        "word": "I"
+                                                },
+                                                {
+                                                        "end": 41.259,
+                                                        "score": 0.78,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 40.959,
+                                                        "word": "spent"
+                                                },
+                                                {
+                                                        "end": 41.339,
+                                                        "score": 0.549,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 41.299,
+                                                        "word": "a"
+                                                },
+                                                {
+                                                        "end": 41.659,
+                                                        "score": 0.791,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 41.419,
+                                                        "word": "month"
+                                                },
+                                                {
+                                                        "end": 41.779,
+                                                        "score": 0.721,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 41.699,
+                                                        "word": "in"
+                                                },
+                                                {
+                                                        "end": 42.239,
+                                                        "score": 0.845,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 41.819,
+                                                        "word": "Japan"
+                                                },
+                                                {
+                                                        "end": 42.419,
+                                                        "score": 0.833,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 42.319,
+                                                        "word": "in"
+                                                },
+                                                {
+                                                        "word": "2006."
+                                                }
+                                        ]
+                                },
+                                {
+                                        "end": 50.343,
+                                        "speaker": "SPEAKER_02",
+                                        "start": 43.32,
+                                        "text": "I met all the key people in the tourist industry, the big tour operators and the tourist organizations.",
+                                        "words": [
+                                                {
+                                                        "end": 43.52,
+                                                        "score": 0.824,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 43.32,
+                                                        "word": "I"
+                                                },
+                                                {
+                                                        "end": 44.5,
+                                                        "score": 0.805,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 44.3,
+                                                        "word": "met"
+                                                },
+                                                {
+                                                        "end": 44.74,
+                                                        "score": 0.879,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 44.6,
+                                                        "word": "all"
+                                                },
+                                                {
+                                                        "end": 44.88,
+                                                        "score": 0.847,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 44.8,
+                                                        "word": "the"
+                                                },
+                                                {
+                                                        "end": 45.14,
+                                                        "score": 0.894,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 44.92,
+                                                        "word": "key"
+                                                },
+                                                {
+                                                        "end": 45.561,
+                                                        "score": 0.862,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 45.18,
+                                                        "word": "people"
+                                                },
+                                                {
+                                                        "end": 45.701,
+                                                        "score": 0.818,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 45.621,
+                                                        "word": "in"
+                                                },
+                                                {
+                                                        "end": 45.801,
+                                                        "score": 0.827,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 45.721,
+                                                        "word": "the"
+                                                },
+                                                {
+                                                        "end": 46.201,
+                                                        "score": 0.854,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 45.841,
+                                                        "word": "tourist"
+                                                },
+                                                {
+                                                        "end": 46.741,
+                                                        "score": 0.842,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 46.241,
+                                                        "word": "industry,"
+                                                },
+                                                {
+                                                        "end": 47.281,
+                                                        "score": 0.764,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 47.181,
+                                                        "word": "the"
+                                                },
+                                                {
+                                                        "end": 47.481,
+                                                        "score": 0.893,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 47.301,
+                                                        "word": "big"
+                                                },
+                                                {
+                                                        "end": 47.842,
+                                                        "score": 0.747,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 47.541,
+                                                        "word": "tour"
+                                                },
+                                                {
+                                                        "end": 48.622,
+                                                        "score": 0.83,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 47.922,
+                                                        "word": "operators"
+                                                },
+                                                {
+                                                        "end": 48.902,
+                                                        "score": 0.647,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 48.782,
+                                                        "word": "and"
+                                                },
+                                                {
+                                                        "end": 49.042,
+                                                        "score": 0.828,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 48.962,
+                                                        "word": "the"
+                                                },
+                                                {
+                                                        "end": 49.482,
+                                                        "score": 0.845,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 49.102,
+                                                        "word": "tourist"
+                                                },
+                                                {
+                                                        "end": 50.343,
+                                                        "score": 0.838,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 49.542,
+                                                        "word": "organizations."
+                                                }
+                                        ]
+                                },
+                                {
+                                        "end": 54.424,
+                                        "speaker": "SPEAKER_02",
+                                        "start": 51.023,
+                                        "text": "As I speak Japanese, I had a very big advantage.",
+                                        "words": [
+                                                {
+                                                        "end": 51.123,
+                                                        "score": 0.865,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 51.023,
+                                                        "word": "As"
+                                                },
+                                                {
+                                                        "end": 51.283,
+                                                        "score": 1.0,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 51.223,
+                                                        "word": "I"
+                                                },
+                                                {
+                                                        "end": 51.603,
+                                                        "score": 0.964,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 51.343,
+                                                        "word": "speak"
+                                                },
+                                                {
+                                                        "end": 52.304,
+                                                        "score": 0.866,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 51.643,
+                                                        "word": "Japanese,"
+                                                },
+                                                {
+                                                        "end": 52.884,
+                                                        "score": 0.991,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 52.804,
+                                                        "word": "I"
+                                                },
+                                                {
+                                                        "end": 53.064,
+                                                        "score": 0.889,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 52.924,
+                                                        "word": "had"
+                                                },
+                                                {
+                                                        "end": 53.124,
+                                                        "score": 0.499,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 53.084,
+                                                        "word": "a"
+                                                },
+                                                {
+                                                        "end": 53.464,
+                                                        "score": 0.748,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 53.184,
+                                                        "word": "very"
+                                                },
+                                                {
+                                                        "end": 53.724,
+                                                        "score": 0.889,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 53.524,
+                                                        "word": "big"
+                                                },
+                                                {
+                                                        "end": 54.424,
+                                                        "score": 0.86,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 53.764,
+                                                        "word": "advantage."
+                                                }
+                                        ]
+                                },
+                                {
+                                        "end": 55.685,
+                                        "speaker": "SPEAKER_00",
+                                        "start": 54.524,
+                                        "text": "Yes, of course.",
+                                        "words": [
+                                                {
+                                                        "end": 54.965,
+                                                        "score": 0.767,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 54.524,
+                                                        "word": "Yes,"
+                                                },
+                                                {
+                                                        "end": 55.165,
+                                                        "score": 0.832,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 55.085,
+                                                        "word": "of"
+                                                },
+                                                {
+                                                        "end": 55.685,
+                                                        "score": 0.876,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 55.285,
+                                                        "word": "course."
+                                                }
+                                        ]
+                                },
+                                {
+                                        "end": 60.007,
+                                        "speaker": "SPEAKER_00",
+                                        "start": 56.505,
+                                        "text": "Have you had any contact with Japan in your present job?",
+                                        "words": [
+                                                {
+                                                        "end": 56.665,
+                                                        "score": 0.906,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 56.505,
+                                                        "word": "Have"
+                                                },
+                                                {
+                                                        "end": 56.825,
+                                                        "score": 0.866,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 56.705,
+                                                        "word": "you"
+                                                },
+                                                {
+                                                        "end": 57.086,
+                                                        "score": 0.779,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 56.886,
+                                                        "word": "had"
+                                                },
+                                                {
+                                                        "end": 57.306,
+                                                        "score": 0.736,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 57.146,
+                                                        "word": "any"
+                                                },
+                                                {
+                                                        "end": 57.966,
+                                                        "score": 0.846,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 57.426,
+                                                        "word": "contact"
+                                                },
+                                                {
+                                                        "end": 58.226,
+                                                        "score": 0.847,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 58.046,
+                                                        "word": "with"
+                                                },
+                                                {
+                                                        "end": 58.806,
+                                                        "score": 0.815,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 58.306,
+                                                        "word": "Japan"
+                                                },
+                                                {
+                                                        "end": 59.086,
+                                                        "score": 0.992,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 59.026,
+                                                        "word": "in"
+                                                },
+                                                {
+                                                        "end": 59.307,
+                                                        "score": 0.914,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 59.127,
+                                                        "word": "your"
+                                                },
+                                                {
+                                                        "end": 59.687,
+                                                        "score": 0.917,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 59.347,
+                                                        "word": "present"
+                                                },
+                                                {
+                                                        "end": 60.007,
+                                                        "score": 1.0,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 59.727,
+                                                        "word": "job?"
+                                                }
+                                        ]
+                                },
+                                {
+                                        "end": 62.332,
+                                        "speaker": "SPEAKER_02",
+                                        "start": 60.811,
+                                        "text": " Yes, I've had a lot.",
+                                        "words": [
+                                                {
+                                                        "end": 61.151,
+                                                        "score": 0.779,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 60.811,
+                                                        "word": "Yes,"
+                                                },
+                                                {
+                                                        "end": 61.672,
+                                                        "score": 0.898,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 61.492,
+                                                        "word": "I've"
+                                                },
+                                                {
+                                                        "end": 61.872,
+                                                        "score": 0.739,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 61.692,
+                                                        "word": "had"
+                                                },
+                                                {
+                                                        "end": 61.952,
+                                                        "score": 0.999,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 61.932,
+                                                        "word": "a"
+                                                },
+                                                {
+                                                        "end": 62.332,
+                                                        "score": 0.881,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 62.012,
+                                                        "word": "lot."
+                                                }
+                                        ]
+                                },
+                                {
+                                        "end": 70.078,
+                                        "speaker": "SPEAKER_02",
+                                        "start": 63.013,
+                                        "text": "Cruises have become very popular with the Japanese, both for holidays and for business conferences.",
+                                        "words": [
+                                                {
+                                                        "end": 63.613,
+                                                        "score": 0.877,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 63.013,
+                                                        "word": "Cruises"
+                                                },
+                                                {
+                                                        "end": 63.993,
+                                                        "score": 0.753,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 63.833,
+                                                        "word": "have"
+                                                },
+                                                {
+                                                        "end": 64.374,
+                                                        "score": 0.848,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 64.053,
+                                                        "word": "become"
+                                                },
+                                                {
+                                                        "end": 64.774,
+                                                        "score": 0.79,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 64.474,
+                                                        "word": "very"
+                                                },
+                                                {
+                                                        "end": 65.454,
+                                                        "score": 0.882,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 64.894,
+                                                        "word": "popular"
+                                                },
+                                                {
+                                                        "end": 65.654,
+                                                        "score": 0.75,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 65.514,
+                                                        "word": "with"
+                                                },
+                                                {
+                                                        "end": 65.775,
+                                                        "score": 0.831,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 65.695,
+                                                        "word": "the"
+                                                },
+                                                {
+                                                        "end": 66.455,
+                                                        "score": 0.8,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 65.815,
+                                                        "word": "Japanese,"
+                                                },
+                                                {
+                                                        "end": 67.256,
+                                                        "score": 0.828,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 67.035,
+                                                        "word": "both"
+                                                },
+                                                {
+                                                        "end": 67.496,
+                                                        "score": 0.821,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 67.336,
+                                                        "word": "for"
+                                                },
+                                                {
+                                                        "end": 68.196,
+                                                        "score": 0.8,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 67.576,
+                                                        "word": "holidays"
+                                                },
+                                                {
+                                                        "end": 68.557,
+                                                        "score": 0.674,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 68.436,
+                                                        "word": "and"
+                                                },
+                                                {
+                                                        "end": 68.877,
+                                                        "score": 0.84,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 68.717,
+                                                        "word": "for"
+                                                },
+                                                {
+                                                        "end": 69.337,
+                                                        "score": 0.812,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 68.937,
+                                                        "word": "business"
+                                                },
+                                                {
+                                                        "end": 70.078,
+                                                        "score": 0.839,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 69.397,
+                                                        "word": "conferences."
+                                                }
+                                        ]
+                                },
+                                {
+                                        "end": 77.283,
+                                        "speaker": "SPEAKER_02",
+                                        "start": 70.738,
+                                        "text": "In fact, the market for all types of luxury holidays for the Japanese has increased a lot recently.",
+                                        "words": [
+                                                {
+                                                        "end": 70.838,
+                                                        "score": 0.755,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 70.738,
+                                                        "word": "In"
+                                                },
+                                                {
+                                                        "end": 71.258,
+                                                        "score": 0.652,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 70.898,
+                                                        "word": "fact,"
+                                                },
+                                                {
+                                                        "end": 71.819,
+                                                        "score": 0.997,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 71.699,
+                                                        "word": "the"
+                                                },
+                                                {
+                                                        "end": 72.319,
+                                                        "score": 0.866,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 71.899,
+                                                        "word": "market"
+                                                },
+                                                {
+                                                        "end": 72.519,
+                                                        "score": 0.866,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 72.379,
+                                                        "word": "for"
+                                                },
+                                                {
+                                                        "end": 72.82,
+                                                        "score": 0.991,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 72.679,
+                                                        "word": "all"
+                                                },
+                                                {
+                                                        "end": 73.2,
+                                                        "score": 0.916,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 72.9,
+                                                        "word": "types"
+                                                },
+                                                {
+                                                        "end": 73.34,
+                                                        "score": 0.771,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 73.26,
+                                                        "word": "of"
+                                                },
+                                                {
+                                                        "end": 73.82,
+                                                        "score": 0.827,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 73.4,
+                                                        "word": "luxury"
+                                                },
+                                                {
+                                                        "end": 74.341,
+                                                        "score": 0.797,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 73.86,
+                                                        "word": "holidays"
+                                                },
+                                                {
+                                                        "end": 74.541,
+                                                        "score": 0.883,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 74.401,
+                                                        "word": "for"
+                                                },
+                                                {
+                                                        "end": 74.641,
+                                                        "score": 0.832,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 74.561,
+                                                        "word": "the"
+                                                },
+                                                {
+                                                        "end": 75.221,
+                                                        "score": 0.891,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 74.681,
+                                                        "word": "Japanese"
+                                                },
+                                                {
+                                                        "end": 75.782,
+                                                        "score": 0.991,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 75.641,
+                                                        "word": "has"
+                                                },
+                                                {
+                                                        "end": 76.302,
+                                                        "score": 0.867,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 75.842,
+                                                        "word": "increased"
+                                                },
+                                                {
+                                                        "end": 76.422,
+                                                        "score": 0.512,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 76.382,
+                                                        "word": "a"
+                                                },
+                                                {
+                                                        "end": 76.742,
+                                                        "score": 0.87,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 76.482,
+                                                        "word": "lot"
+                                                },
+                                                {
+                                                        "end": 77.283,
+                                                        "score": 0.975,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 76.802,
+                                                        "word": "recently."
+                                                }
+                                        ]
+                                },
+                                {
+                                        "end": 77.983,
+                                        "speaker": "SPEAKER_00",
+                                        "start": 77.523,
+                                        "text": "Really?",
+                                        "words": [
+                                                {
+                                                        "end": 77.983,
+                                                        "score": 0.74,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 77.523,
+                                                        "word": "Really?"
+                                                }
+                                        ]
+                                },
+                                {
+                                        "end": 87.61,
+                                        "speaker": "SPEAKER_00",
+                                        "start": 78.844,
+                                        "text": "I'm interested to hear more about that, but first tell me, have you ever travelled on a luxury train, the Orient Express, for example?",
+                                        "words": [
+                                                {
+                                                        "end": 78.964,
+                                                        "score": 0.983,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 78.844,
+                                                        "word": "I'm"
+                                                },
+                                                {
+                                                        "end": 79.424,
+                                                        "score": 0.929,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 79.004,
+                                                        "word": "interested"
+                                                },
+                                                {
+                                                        "end": 79.544,
+                                                        "score": 0.894,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 79.464,
+                                                        "word": "to"
+                                                },
+                                                {
+                                                        "end": 79.764,
+                                                        "score": 0.785,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 79.584,
+                                                        "word": "hear"
+                                                },
+                                                {
+                                                        "end": 80.125,
+                                                        "score": 0.783,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 79.884,
+                                                        "word": "more"
+                                                },
+                                                {
+                                                        "end": 80.445,
+                                                        "score": 0.993,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 80.185,
+                                                        "word": "about"
+                                                },
+                                                {
+                                                        "end": 80.705,
+                                                        "score": 0.865,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 80.505,
+                                                        "word": "that,"
+                                                },
+                                                {
+                                                        "end": 81.265,
+                                                        "score": 0.777,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 81.125,
+                                                        "word": "but"
+                                                },
+                                                {
+                                                        "end": 81.626,
+                                                        "score": 0.773,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 81.345,
+                                                        "word": "first"
+                                                },
+                                                {
+                                                        "end": 82.026,
+                                                        "score": 0.999,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 81.826,
+                                                        "word": "tell"
+                                                },
+                                                {
+                                                        "end": 82.206,
+                                                        "score": 0.834,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 82.066,
+                                                        "word": "me,"
+                                                },
+                                                {
+                                                        "end": 82.606,
+                                                        "score": 0.839,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 82.446,
+                                                        "word": "have"
+                                                },
+                                                {
+                                                        "end": 82.766,
+                                                        "score": 0.943,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 82.646,
+                                                        "word": "you"
+                                                },
+                                                {
+                                                        "end": 83.047,
+                                                        "score": 0.908,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 82.867,
+                                                        "word": "ever"
+                                                },
+                                                {
+                                                        "end": 83.567,
+                                                        "score": 0.83,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 83.147,
+                                                        "word": "travelled"
+                                                },
+                                                {
+                                                        "end": 83.827,
+                                                        "score": 0.806,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 83.727,
+                                                        "word": "on"
+                                                },
+                                                {
+                                                        "end": 83.907,
+                                                        "score": 0.497,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 83.867,
+                                                        "word": "a"
+                                                },
+                                                {
+                                                        "end": 84.528,
+                                                        "score": 0.814,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 84.027,
+                                                        "word": "luxury"
+                                                },
+                                                {
+                                                        "end": 85.008,
+                                                        "score": 0.807,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 84.628,
+                                                        "word": "train,"
+                                                },
+                                                {
+                                                        "end": 85.769,
+                                                        "score": 0.817,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 85.588,
+                                                        "word": "the"
+                                                },
+                                                {
+                                                        "end": 86.349,
+                                                        "score": 0.871,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 85.969,
+                                                        "word": "Orient"
+                                                },
+                                                {
+                                                        "end": 86.889,
+                                                        "score": 0.919,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 86.429,
+                                                        "word": "Express,"
+                                                },
+                                                {
+                                                        "end": 87.13,
+                                                        "score": 0.836,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 87.009,
+                                                        "word": "for"
+                                                },
+                                                {
+                                                        "end": 87.61,
+                                                        "score": 0.903,
+                                                        "speaker": "SPEAKER_00",
+                                                        "start": 87.21,
+                                                        "word": "example?"
+                                                }
+                                        ]
+                                },
+                                {
+                                        "end": 89.298,
+                                        "speaker": "SPEAKER_02",
+                                        "start": 88.317,
+                                        "text": " No, I haven't.",
+                                        "words": [
+                                                {
+                                                        "end": 88.617,
+                                                        "score": 0.782,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 88.317,
+                                                        "word": "No,"
+                                                },
+                                                {
+                                                        "end": 88.817,
+                                                        "score": 0.959,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 88.757,
+                                                        "word": "I"
+                                                },
+                                                {
+                                                        "end": 89.298,
+                                                        "score": 0.744,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 88.898,
+                                                        "word": "haven't."
+                                                }
+                                        ]
+                                },
+                                {
+                                        "end": 97.683,
+                                        "speaker": "SPEAKER_02",
+                                        "start": 89.978,
+                                        "text": "But I've traveled on the Glacier Express through Switzerland, and I've traveled across China by train about eight years ago.",
+                                        "words": [
+                                                {
+                                                        "end": 90.138,
+                                                        "score": 0.884,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 89.978,
+                                                        "word": "But"
+                                                },
+                                                {
+                                                        "end": 90.378,
+                                                        "score": 0.825,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 90.198,
+                                                        "word": "I've"
+                                                },
+                                                {
+                                                        "end": 90.819,
+                                                        "score": 0.811,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 90.438,
+                                                        "word": "traveled"
+                                                },
+                                                {
+                                                        "end": 90.959,
+                                                        "score": 0.934,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 90.899,
+                                                        "word": "on"
+                                                },
+                                                {
+                                                        "end": 91.099,
+                                                        "score": 0.834,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 90.999,
+                                                        "word": "the"
+                                                },
+                                                {
+                                                        "end": 91.679,
+                                                        "score": 0.823,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 91.159,
+                                                        "word": "Glacier"
+                                                },
+                                                {
+                                                        "end": 92.3,
+                                                        "score": 0.876,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 91.759,
+                                                        "word": "Express"
+                                                },
+                                                {
+                                                        "end": 92.6,
+                                                        "score": 0.865,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 92.36,
+                                                        "word": "through"
+                                                },
+                                                {
+                                                        "end": 93.28,
+                                                        "score": 0.8,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 92.66,
+                                                        "word": "Switzerland,"
+                                                },
+                                                {
+                                                        "end": 93.961,
+                                                        "score": 0.659,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 93.841,
+                                                        "word": "and"
+                                                },
+                                                {
+                                                        "end": 94.141,
+                                                        "score": 0.415,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 94.021,
+                                                        "word": "I've"
+                                                },
+                                                {
+                                                        "end": 94.581,
+                                                        "score": 0.823,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 94.181,
+                                                        "word": "traveled"
+                                                },
+                                                {
+                                                        "end": 95.001,
+                                                        "score": 0.875,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 94.621,
+                                                        "word": "across"
+                                                },
+                                                {
+                                                        "end": 95.482,
+                                                        "score": 0.863,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 95.101,
+                                                        "word": "China"
+                                                },
+                                                {
+                                                        "end": 95.702,
+                                                        "score": 0.827,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 95.542,
+                                                        "word": "by"
+                                                },
+                                                {
+                                                        "end": 96.182,
+                                                        "score": 0.813,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 95.802,
+                                                        "word": "train"
+                                                },
+                                                {
+                                                        "end": 96.682,
+                                                        "score": 0.843,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 96.382,
+                                                        "word": "about"
+                                                },
+                                                {
+                                                        "end": 97.063,
+                                                        "score": 0.603,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 96.883,
+                                                        "word": "eight"
+                                                },
+                                                {
+                                                        "end": 97.383,
+                                                        "score": 0.562,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 97.103,
+                                                        "word": "years"
+                                                },
+                                                {
+                                                        "end": 97.683,
+                                                        "score": 0.778,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 97.443,
+                                                        "word": "ago."
+                                                }
+                                        ]
+                                },
+                                {
+                                        "end": 99.664,
+                                        "speaker": "SPEAKER_02",
+                                        "start": 98.384,
+                                        "text": "I love train travel.",
+                                        "words": [
+                                                {
+                                                        "end": 98.464,
+                                                        "score": 0.774,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 98.384,
+                                                        "word": "I"
+                                                },
+                                                {
+                                                        "end": 98.904,
+                                                        "score": 0.782,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 98.584,
+                                                        "word": "love"
+                                                },
+                                                {
+                                                        "end": 99.244,
+                                                        "score": 0.788,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 98.984,
+                                                        "word": "train"
+                                                },
+                                                {
+                                                        "end": 99.664,
+                                                        "score": 0.816,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 99.284,
+                                                        "word": "travel."
+                                                }
+                                        ]
+                                },
+                                {
+                                        "end": 102.886,
+                                        "speaker": "SPEAKER_02",
+                                        "start": 100.325,
+                                        "text": "That's why I'm very interested in this job.",
+                                        "words": [
+                                                {
+                                                        "end": 100.565,
+                                                        "score": 0.846,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 100.325,
+                                                        "word": "That's"
+                                                },
+                                                {
+                                                        "end": 100.825,
+                                                        "score": 0.82,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 100.625,
+                                                        "word": "why"
+                                                },
+                                                {
+                                                        "end": 101.025,
+                                                        "score": 0.919,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 100.905,
+                                                        "word": "I'm"
+                                                },
+                                                {
+                                                        "end": 101.426,
+                                                        "score": 0.732,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 101.125,
+                                                        "word": "very"
+                                                },
+                                                {
+                                                        "end": 102.046,
+                                                        "score": 0.826,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 101.506,
+                                                        "word": "interested"
+                                                },
+                                                {
+                                                        "end": 102.226,
+                                                        "score": 0.97,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 102.166,
+                                                        "word": "in"
+                                                },
+                                                {
+                                                        "end": 102.426,
+                                                        "score": 0.683,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 102.266,
+                                                        "word": "this"
+                                                },
+                                                {
+                                                        "end": 102.886,
+                                                        "score": 0.977,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 102.506,
+                                                        "word": "job."
+                                                }
+                                        ]
+                                },
+                                {
+                                        "end": 110.892,
+                                        "speaker": "SPEAKER_02",
+                                        "start": 105.208,
+                                        "text": "Questions 23 to 25 are based on the conversation you have just heard.",
+                                        "words": [
+                                                {
+                                                        "end": 105.808,
+                                                        "score": 0.811,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 105.208,
+                                                        "word": "Questions"
+                                                },
+                                                {
+                                                        "word": "23"
+                                                },
+                                                {
+                                                        "end": 107.67,
+                                                        "score": 0.488,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 106.369,
+                                                        "word": "to"
+                                                },
+                                                {
+                                                        "word": "25"
+                                                },
+                                                {
+                                                        "end": 108.35,
+                                                        "score": 0.781,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 108.23,
+                                                        "word": "are"
+                                                },
+                                                {
+                                                        "end": 108.69,
+                                                        "score": 0.787,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 108.39,
+                                                        "word": "based"
+                                                },
+                                                {
+                                                        "end": 108.83,
+                                                        "score": 0.832,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 108.75,
+                                                        "word": "on"
+                                                },
+                                                {
+                                                        "end": 108.93,
+                                                        "score": 0.828,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 108.85,
+                                                        "word": "the"
+                                                },
+                                                {
+                                                        "end": 109.831,
+                                                        "score": 0.811,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 108.99,
+                                                        "word": "conversation"
+                                                },
+                                                {
+                                                        "end": 110.011,
+                                                        "score": 0.829,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 109.891,
+                                                        "word": "you"
+                                                },
+                                                {
+                                                        "end": 110.191,
+                                                        "score": 0.889,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 110.051,
+                                                        "word": "have"
+                                                },
+                                                {
+                                                        "end": 110.551,
+                                                        "score": 0.711,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 110.271,
+                                                        "word": "just"
+                                                },
+                                                {
+                                                        "end": 110.892,
+                                                        "score": 0.7,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 110.611,
+                                                        "word": "heard."
+                                                }
+                                        ]
+                                },
+                                {
+                                        "end": 113.934,
+                                        "speaker": "SPEAKER_02",
+                                        "start": 112.773,
+                                        "text": "Question 23.",
+                                        "words": [
+                                                {
+                                                        "end": 113.934,
+                                                        "score": 0.741,
+                                                        "speaker": "SPEAKER_02",
+                                                        "start": 112.773,
+                                                        "word": "Question"
+                                                },
+                                                {
+                                                        "word": "23."
+                                                }
+                                        ]
+                                },
+                                {
+                                        "end": 117.656,
+                                        "speaker": "SPEAKER_01",
+                                        "start": 115.134,
+                                        "text": "What did the woman do in her first job?",
+                                        "words": [
+                                                {
+                                                        "end": 115.314,
+                                                        "score": 0.863,
+                                                        "speaker": "SPEAKER_01",
+                                                        "start": 115.134,
+                                                        "word": "What"
+                                                },
+                                                {
+                                                        "end": 115.535,
+                                                        "score": 0.88,
+                                                        "speaker": "SPEAKER_01",
+                                                        "start": 115.374,
+                                                        "word": "did"
+                                                },
+                                                {
+                                                        "end": 115.675,
+                                                        "score": 0.963,
+                                                        "speaker": "SPEAKER_01",
+                                                        "start": 115.575,
+                                                        "word": "the"
+                                                },
+                                                {
+                                                        "end": 116.055,
+                                                        "score": 0.877,
+                                                        "speaker": "SPEAKER_01",
+                                                        "start": 115.755,
+                                                        "word": "woman"
+                                                },
+                                                {
+                                                        "end": 116.435,
+                                                        "score": 0.714,
+                                                        "speaker": "SPEAKER_01",
+                                                        "start": 116.155,
+                                                        "word": "do"
+                                                },
+                                                {
+                                                        "end": 116.735,
+                                                        "score": 0.82,
+                                                        "speaker": "SPEAKER_01",
+                                                        "start": 116.655,
+                                                        "word": "in"
+                                                },
+                                                {
+                                                        "end": 116.915,
+                                                        "score": 0.777,
+                                                        "speaker": "SPEAKER_01",
+                                                        "start": 116.775,
+                                                        "word": "her"
+                                                },
+                                                {
+                                                        "end": 117.256,
+                                                        "score": 0.665,
+                                                        "speaker": "SPEAKER_01",
+                                                        "start": 116.975,
+                                                        "word": "first"
+                                                },
+                                                {
+                                                        "end": 117.656,
+                                                        "score": 0.976,
+                                                        "speaker": "SPEAKER_01",
+                                                        "start": 117.336,
+                                                        "word": "job?"
+                                                }
+                                        ]
+                                },
+                                {
+                                        "end": 157.777,
+                                        "speaker": "SPEAKER_01",
+                                        "start": 134.721,
+                                        "text": " 24.",
+                                        "words": [
+                                                {
+                                                        "word": "24."
+                                                }
+                                        ]
+                                },
+                                {
+                                        "end": 157.777,
+                                        "speaker": "SPEAKER_01",
+                                        "start": 136.062,
+                                        "text": "What gave the woman an advantage during her business trip in Japan?",
+                                        "words": [
+                                                {
+                                                        "end": 136.282,
+                                                        "score": 0.906,
+                                                        "speaker": "SPEAKER_01",
+                                                        "start": 136.062,
+                                                        "word": "What"
+                                                },
+                                                {
+                                                        "end": 136.622,
+                                                        "score": 0.835,
+                                                        "speaker": "SPEAKER_01",
+                                                        "start": 136.382,
+                                                        "word": "gave"
+                                                },
+                                                {
+                                                        "end": 136.802,
+                                                        "score": 0.844,
+                                                        "speaker": "SPEAKER_01",
+                                                        "start": 136.702,
+                                                        "word": "the"
+                                                },
+                                                {
+                                                        "end": 137.183,
+                                                        "score": 0.877,
+                                                        "speaker": "SPEAKER_01",
+                                                        "start": 136.862,
+                                                        "word": "woman"
+                                                },
+                                                {
+                                                        "end": 137.403,
+                                                        "score": 0.892,
+                                                        "speaker": "SPEAKER_01",
+                                                        "start": 137.323,
+                                                        "word": "an"
+                                                },
+                                                {
+                                                        "end": 138.103,
+                                                        "score": 0.869,
+                                                        "speaker": "SPEAKER_01",
+                                                        "start": 137.463,
+                                                        "word": "advantage"
+                                                },
+                                                {
+                                                        "end": 138.644,
+                                                        "score": 0.899,
+                                                        "speaker": "SPEAKER_01",
+                                                        "start": 138.383,
+                                                        "word": "during"
+                                                },
+                                                {
+                                                        "end": 138.824,
+                                                        "score": 0.798,
+                                                        "speaker": "SPEAKER_01",
+                                                        "start": 138.704,
+                                                        "word": "her"
+                                                },
+                                                {
+                                                        "end": 139.344,
+                                                        "score": 0.913,
+                                                        "speaker": "SPEAKER_01",
+                                                        "start": 138.904,
+                                                        "word": "business"
+                                                },
+                                                {
+                                                        "end": 139.704,
+                                                        "score": 0.888,
+                                                        "speaker": "SPEAKER_01",
+                                                        "start": 139.404,
+                                                        "word": "trip"
+                                                },
+                                                {
+                                                        "end": 139.924,
+                                                        "score": 0.838,
+                                                        "speaker": "SPEAKER_01",
+                                                        "start": 139.844,
+                                                        "word": "in"
+                                                },
+                                                {
+                                                        "end": 157.777,
+                                                        "score": 0.915,
+                                                        "speaker": "SPEAKER_01",
+                                                        "start": 139.964,
+                                                        "word": "Japan?"
+                                                }
+                                        ]
+                                },
+                                {
+                                        "end": 161.1,
+                                        "speaker": "SPEAKER_01",
+                                        "start": 158.718,
+                                        "text": "Why is the woman applying for the new job?",
+                                        "words": [
+                                                {
+                                                        "end": 158.958,
+                                                        "score": 0.937,
+                                                        "speaker": "SPEAKER_01",
+                                                        "start": 158.718,
+                                                        "word": "Why"
+                                                },
+                                                {
+                                                        "end": 159.158,
+                                                        "score": 0.758,
+                                                        "speaker": "SPEAKER_01",
+                                                        "start": 159.038,
+                                                        "word": "is"
+                                                },
+                                                {
+                                                        "end": 159.298,
+                                                        "score": 0.983,
+                                                        "speaker": "SPEAKER_01",
+                                                        "start": 159.218,
+                                                        "word": "the"
+                                                },
+                                                {
+                                                        "end": 159.598,
+                                                        "score": 0.91,
+                                                        "speaker": "SPEAKER_01",
+                                                        "start": 159.338,
+                                                        "word": "woman"
+                                                },
+                                                {
+                                                        "end": 160.179,
+                                                        "score": 0.913,
+                                                        "speaker": "SPEAKER_01",
+                                                        "start": 159.638,
+                                                        "word": "applying"
+                                                },
+                                                {
+                                                        "end": 160.379,
+                                                        "score": 0.997,
+                                                        "speaker": "SPEAKER_01",
+                                                        "start": 160.259,
+                                                        "word": "for"
+                                                },
+                                                {
+                                                        "end": 160.519,
+                                                        "score": 0.838,
+                                                        "speaker": "SPEAKER_01",
+                                                        "start": 160.419,
+                                                        "word": "the"
+                                                },
+                                                {
+                                                        "end": 160.719,
+                                                        "score": 0.901,
+                                                        "speaker": "SPEAKER_01",
+                                                        "start": 160.559,
+                                                        "word": "new"
+                                                },
+                                                {
+                                                        "end": 161.1,
+                                                        "score": 1.0,
+                                                        "speaker": "SPEAKER_01",
+                                                        "start": 160.779,
+                                                        "word": "job?"
+                                                }
+                                        ]
+                                }
+                        ]
+                }
+        ]
+}
