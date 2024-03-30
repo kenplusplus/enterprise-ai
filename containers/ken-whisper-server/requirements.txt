@@ -1,2 +1,4 @@
 flask
 torch
+fastapi[all]
+uvicorn

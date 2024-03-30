@@ -22,8 +22,8 @@ def send_requests(filepath, server_url):
     }
     response = requests.post(server_url, files=files)
     print("HTTP Response", response.json())
-    results = response.json()['results'][0]
-    return results['transcript']
+    results = response.json()
+    return results['text']
 
 if __name__=="__main__":
     logging.basicConfig()
