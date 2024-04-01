@@ -10,7 +10,9 @@
 
 ### 1.1 Run TTS (Text-To-Speech) Server
 
-Use [OpenTTS](https://github.com/synesthesiam/opentts) setup the TTS server
+Use [OpenVoice](https://github.com/kenplusplus/OpenVoice) setup the TTS server
+
+![](docs/tts-service.png)
 
 ```shell
 docker pull registry.cn-hangzhou.aliyuncs.com/kenplusplus/openvoice-server:latest
@@ -31,6 +33,8 @@ curl -X 'POST' http://localhost:5500/v1/audio/speech \
 _NOTE: Please replace `localhost` into your hosting TTS server address._
 
 ### 1.2 Run ASR(Automatic Speech Recognition) Server
+
+![](docs/asr-service.png)
 
 ```shell
 docker pull registry.cn-hangzhou.aliyuncs.com/kenplusplus/ken-whisper-server:latest
