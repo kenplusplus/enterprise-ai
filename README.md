@@ -9,16 +9,18 @@
 Use [OpenTTS](https://github.com/synesthesiam/opentts) setup the TTS server
 
 ```shell
-docker pull bluewish/ken-opentts-server:latest
-docker run -it -p 5500:5500 ken-opentts-server
+docker pull registry.cn-hangzhou.aliyuncs.com/kenplusplus/openvoice-server:latest
+docker run -it -p 5500:5500 registry.cn-hangzhou.aliyuncs.com/kenplusplus/openvoice-server:latest
 ```
 
-You can access via:
+Then you can use following approach to test TTS server:
 
-| Access | URL |
-| ------ | --- |
-| Web UI | http://localhost:5500/ |
-| API | https://github.com/synesthesiam/opentts?tab=readme-ov-file#http-api-endpoints |
+```shell
+curl -X 'POST' http://localhost:5500/v1/audio/speech \
+    -d '{ "input": "人民是我们党执政的最大底气，是我们共和国的坚实根基，是我们强党兴国的根本所在" }' \
+    -H 'accept: application/json' \
+    -H 'Content-Type: application/json' --output test55.mp3
+```
 
 ### 1.2 Run ASR(Automatic Speech Recognition) Server
 
