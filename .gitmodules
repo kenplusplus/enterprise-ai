@@ -10,3 +10,6 @@
 [submodule "containers/openvoice-server/OpenVoice"]
 	path = containers/openvoice-server/OpenVoice
 	url = https://github.com/kenplusplus/OpenVoice.git
+[submodule "containers/fastchat-server/fastchat"]
+	path = containers/fastchat-server/fastchat
+	url = https://github.com/kenplusplus/FastChat.git
