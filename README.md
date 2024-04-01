@@ -22,6 +22,8 @@ curl -X 'POST' http://localhost:5500/v1/audio/speech \
     -H 'Content-Type: application/json' --output test55.mp3
 ```
 
+_NOTE: Please replace `localhost` into your hosting TTS server address._
+
 ### 1.2 Run ASR(Automatic Speech Recognition) Server
 
 ```shell
@@ -42,6 +44,8 @@ or
 ```shell
 python ./containers/whisper-server/whisper_client.py -f <audio file.wav> -u http://localhost:5000/whisper
 ```
+
+_NOTE: Please replace `localhost` into your hosting ASR server address._
 
 ### 1.3 Run WhisperX (ASR + Diarize + Alignment) Server
 
