@@ -1,6 +1,10 @@
 # Enterprise AI
 
-![](docs/pipeline-overview.png)
+- ChatBot Pipeline
+
+![](docs/chatbot-pipeline-overview.png)
+
+- Meeting Summary Pipeline (TBD)
 
 ## 1. Quick Start
 
