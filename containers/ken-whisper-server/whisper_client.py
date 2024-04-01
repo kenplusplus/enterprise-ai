@@ -4,7 +4,7 @@ import logging
 import argparse
 
 """
-curl -F "file=@/path/to/file" http://localhost:5000/whisper
+curl -X 'POST' -F "file=@/path/to/file" http://localhost:5000/v1/audio/transcriptions
 """
 
 def parse_args():
@@ -12,7 +12,7 @@ def parse_args():
                     prog='whisper_client',
                     description='Client to test whisper server')
     parser.add_argument('-f', '--file', dest="audio_file", required=True)
-    parser.add_argument('-u', '--url', dest="server_url", default="http://localhost:5000/whisper")
+    parser.add_argument('-u', '--url', dest="server_url", default="http://localhost:5000/v1/audio/transcriptions")
     args = parser.parse_args()
     return args
 

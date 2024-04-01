@@ -1,4 +1,5 @@
 flask
 torch
+websockets
 fastapi[all]
-uvicorn
+uvicorn[standard]

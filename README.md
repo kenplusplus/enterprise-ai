@@ -23,14 +23,14 @@ You can access via:
 ### 1.2 Run ASR(Automatic Speech Recognition) Server
 
 ```shell
-docker pull bluewish/ken-whisper-server:latest
-docker run -it -p 5000:5000 bluewish/ken-whisper-server
+docker pull registry.cn-hangzhou.aliyuncs.com/kenplusplus/ken-whisper-server:latest
+docker run -it -p 5000:5000 registry.cn-hangzhou.aliyuncs.com/kenplusplus/ken-whisper-server
 ```
 
 Then you can use following approach to test ASR server:
 
 ```shell
-curl -F "file=@/path/to/file" http://localhost:5000/whisper
+curl -X 'POST' -F "file=@/path/to/file" http://localhost:5000/v1/audio/transcriptions
 ```
 
 _NOTE: You can replace /path/to/file to [example file](./containers/ken-whisper-server/test22.wav)._
