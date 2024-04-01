@@ -13,6 +13,8 @@ docker pull registry.cn-hangzhou.aliyuncs.com/kenplusplus/openvoice-server:lates
 docker run -it -p 5500:5500 registry.cn-hangzhou.aliyuncs.com/kenplusplus/openvoice-server:latest
 ```
 
+_NOTE: the Restful API is compatible with OpenAI [speech API](https://platform.openai.com/docs/api-reference/audio/createSpeech)._
+
 Then you can use following approach to test TTS server:
 
 ```shell
@@ -30,6 +32,8 @@ _NOTE: Please replace `localhost` into your hosting TTS server address._
 docker pull registry.cn-hangzhou.aliyuncs.com/kenplusplus/ken-whisper-server:latest
 docker run -it -p 5000:5000 registry.cn-hangzhou.aliyuncs.com/kenplusplus/ken-whisper-server
 ```
+
+_NOTE: the Restful API is compatible with OpenAI [Transcription API](https://platform.openai.com/docs/api-reference/audio/createTranscription)._
 
 Then you can use following approach to test ASR server:
 
