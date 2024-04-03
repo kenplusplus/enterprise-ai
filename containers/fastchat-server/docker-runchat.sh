@@ -88,7 +88,7 @@ run_cli() {
     if [[ $IS_DEBUG == true ]]; then
         docker run \
             -it \
-            -e ATEN_CPU_CAPABILITY=${ISA_TYPE} \
+            -e CPU_ISA=${ISA_TYPE} \
             -v ./fastchat:/home/ubuntu/fastchat \
             -v $MODEL_PATH:/home/ubuntu/model/ \
             ${REGISTER}${CONTAINER_NAME}:${TAG} \
@@ -96,7 +96,7 @@ run_cli() {
     else
         docker run \
             -it \
-            -e ATEN_CPU_CAPABILITY=${ISA_TYPE} \
+            -e CPU_ISA=${ISA_TYPE} \
             -v ./fastchat:/home/ubuntu/fastchat \
             -v $MODEL_PATH:/home/ubuntu/model/ \
             ${REGISTER}${CONTAINER_NAME}:${TAG} \
@@ -154,7 +154,6 @@ run_model() {
         -it \
         -v ${MODEL_PATH}:/home/ubuntu/model \
         -p ${MODEL_WORKER_PORT}:${MODEL_WORKER_PORT} \
-        -e ATEN_CPU_CAPABILITY=${ISA_TYPE} \
         -e CPU_ISA=${ISA_TYPE} \
         -e MODEL_NAME=${MODEL_NAME} \
         -e MODEL_WORKER_SVC=${MODEL_WORKER_SVC} \
