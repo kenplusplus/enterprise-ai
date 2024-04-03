@@ -91,6 +91,7 @@ run_cli() {
             -e CPU_ISA=${ISA_TYPE} \
             -v ./fastchat:/home/ubuntu/fastchat \
             -v $MODEL_PATH:/home/ubuntu/model/ \
+            -v ${CURR_DIR}/start-chat.sh:/home/ubuntu/start-chat.sh \
             ${REGISTER}${CONTAINER_NAME}:${TAG} \
             /bin/bash
     else
@@ -99,6 +100,7 @@ run_cli() {
             -e CPU_ISA=${ISA_TYPE} \
             -v ./fastchat:/home/ubuntu/fastchat \
             -v $MODEL_PATH:/home/ubuntu/model/ \
+            -v ${CURR_DIR}/start-chat.sh:/home/ubuntu/start-chat.sh \
             ${REGISTER}${CONTAINER_NAME}:${TAG} \
             /home/ubuntu/start-chat.sh -m /home/ubuntu/model/ -r /home/ubuntu/fastchat
     fi
