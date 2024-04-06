@@ -13,3 +13,6 @@
 [submodule "containers/fastchat-server/fastchat"]
 	path = containers/fastchat-server/fastchat
 	url = https://github.com/kenplusplus/FastChat.git
+[submodule "containers/faster-whisper-server/faster-whisper"]
+	path = containers/faster-whisper-server/faster-whisper
+	url = https://github.com/lewangdev/faster-whisper
