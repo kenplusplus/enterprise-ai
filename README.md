@@ -2,9 +2,11 @@
 
 - ChatBot Pipeline
 
-![](docs/chatbot-pipeline-overview.png)
+![](/docs/chatbot-pipeline-overview.png)
 
-- Meeting Summary Pipeline (TBD)
+- Meeting Summary Pipeline
+
+![](/docs/meeting-summary-pipeline-overview.png)
 
 ## 1. Quick Start
 
