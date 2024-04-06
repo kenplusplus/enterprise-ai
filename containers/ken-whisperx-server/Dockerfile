@@ -12,15 +12,16 @@ FROM ipex_base as base
 
 ARG hf_token=""
 ARG pip_mirror=""
+
 RUN pip install huggingface_hub ${pip_mirror}
 RUN huggingface-cli login --token ${hf_token}
 
-RUN huggingface-cli download --repo-type model jonatasgrosman/wav2vec2-large-xlsr-53-chinese-zh-cn
-RUN huggingface-cli download --repo-type model pyannote/speaker-diarization-3.1
-RUN huggingface-cli download --repo-type model pyannote/segmentation-3.0
-RUN huggingface-cli download --repo-type model Systran/faster-whisper-large-v3
-RUN huggingface-cli download --repo-type model Systran/faster-whisper-base
-RUN huggingface-cli download --repo-type model Systran/faster-whisper-small
+RUN huggingface-cli download --resume-download --repo-type model jonatasgrosman/wav2vec2-large-xlsr-53-chinese-zh-cn
+RUN huggingface-cli download --resume-download --repo-type model pyannote/speaker-diarization-3.1
+RUN huggingface-cli download --resume-download --repo-type model pyannote/segmentation-3.0
+RUN huggingface-cli download --resume-download --repo-type model Systran/faster-whisper-large-v3
+RUN huggingface-cli download --resume-download --repo-type model Systran/faster-whisper-base
+RUN huggingface-cli download --resume-download --repo-type model Systran/faster-whisper-small
 
 RUN mkdir -p ~/.cache/torch/hub/checkpoints/
 RUN wget -O ~/.cache/torch/whisperx-vad-segmentation.bin \
@@ -36,14 +37,13 @@ FROM base
 
 ARG pip_mirror=""
 
-WORKDIR /app/
-COPY . .
-RUN pip3 install flask
-RUN pip3 install ./whisperx/ ${pip_mirror}
-
 RUN apt-get install procps -y
 
-ENV FLASK_APP=app.py
+WORKDIR /app/
+COPY . .
+RUN pip3 install -r ./requirements.txt
+RUN pip3 install ./whisperx/ ${pip_mirror}
+
 EXPOSE 5000
 
 CMD [ "./start.sh"]

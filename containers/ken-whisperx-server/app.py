@@ -53,12 +53,12 @@ def handler():
         result = model.transcribe(audio, batch_size=batch_size)
         print(result["segments"]) # before alignment
 
-
         # 2. Align whisper output
         language = result["language"]
         if language not in align_models:
             print("not find the language %s" % language)
-            abort(400)
+
+        print("========> Language found: %s", language)
 
         result = whisperx.align(result["segments"],
                                 align_models[language]['model'],
@@ -66,16 +66,16 @@ def handler():
                                 audio,
                                 DEVICE,
                                 return_char_alignments=False)
-
-        print(result["segments"]) # after alignment
+        print("========> After align")
 
         # add min/max number of speakers if known
         diarize_segments = diarize_model(audio)
         # diarize_model(audio, min_speakers=min_speakers, max_speakers=max_speakers)
-
+        print("========> After diarize_model")
         result = whisperx.assign_word_speakers(diarize_segments, result)
         print(diarize_segments)
-        print(result["segments"]) # segments are now assigned speaker IDs
+        print(result.keys())
+        print(result['word_segments'])
         final_results.append({
             'filename': filename,
             'segments': result["segments"]
