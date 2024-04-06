@@ -65,7 +65,16 @@ def create_transcription(file: Annotated[bytes, File()],
     print("Step4: Assign workers ...")
     result = whisperx.assign_word_speakers(diarize_segments, result)
 
+    text = ""
+    speaker_segments = []
+    for segment in result["segments"]:
+        text += " " + segment['text']
+        speaker_segments.append({ 'speaker':segment['speaker'], 'text':segment['text']})
+
+    print(text)
+    print(speaker_segments)
+
     return {
-        "text": result['segments'][0]['text'],
-        "segments": result['segments']
+        "text": text,
+        "segments": speaker_segments
     }
