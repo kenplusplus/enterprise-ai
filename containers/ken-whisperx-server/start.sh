@@ -15,4 +15,4 @@ source $(python -c "import oneccl_bindings_for_pytorch as torch_ccl;print(torch_
 # with MPI
 # source $(python -c "import oneccl_bindings_for_pytorch as torch_ccl;print(torch_ccl.cwd)")/env/setvars.sh
 
-python -m flask run --host=0.0.0.0
+uvicorn openapi:app --host 0.0.0.0 --port 5000
