@@ -1,5 +1,5 @@
 [submodule "containers/ken-opentts-server/opentts"]
-	path = containers/ken-opentts-server/opentts
+	path = containers/opentts-server/opentts
 	url = https://github.com/kenplusplus/opentts.git
 [submodule "containers/ken-whisper-server/whisper"]
 	path = containers/whisper-server/whisper
