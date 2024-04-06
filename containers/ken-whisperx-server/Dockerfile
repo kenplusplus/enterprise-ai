@@ -11,17 +11,23 @@ RUN pip install intel-extension-for-pytorch==2.2.0 oneccl_bind_pt \
 FROM ipex_base as base
 
 ARG hf_token=""
-ARG pip_mirror=""
+ARG pip_mirror="-i https://mirrors.aliyun.com/pypi/simple/"
 
 RUN pip install huggingface_hub ${pip_mirror}
 RUN huggingface-cli login --token ${hf_token}
 
-RUN huggingface-cli download --resume-download --repo-type model jonatasgrosman/wav2vec2-large-xlsr-53-chinese-zh-cn
 RUN huggingface-cli download --resume-download --repo-type model pyannote/speaker-diarization-3.1
 RUN huggingface-cli download --resume-download --repo-type model pyannote/segmentation-3.0
-RUN huggingface-cli download --resume-download --repo-type model Systran/faster-whisper-large-v3
-RUN huggingface-cli download --resume-download --repo-type model Systran/faster-whisper-base
+
+RUN huggingface-cli download --resume-download --repo-type model jonatasgrosman/wav2vec2-large-xlsr-53-chinese-zh-cn
+#RUN huggingface-cli download --resume-download --repo-type model Systran/faster-whisper-large-v3
+#RUN huggingface-cli download --resume-download --repo-type model Systran/faster-whisper-base
 RUN huggingface-cli download --resume-download --repo-type model Systran/faster-whisper-small
+RUN huggingface-cli download --resume-download --repo-type model pyannote/wespeaker-voxceleb-resnet34-LM
+RUN mkdir -p /root/.cache/torch/pyannote
+RUN ln -s /root/.cache/huggingface/hub/models--pyannote--segmentation-3.0 /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0
+RUN ln -s /root/.cache/huggingface/hub/models--pyannote--speaker-diarization-3.1 /root/.cache/torch/pyannote/models--pyannote--speaker-diarization-3.1
+RUN ln -s /root/.cache/huggingface/hub/models--pyannote--wespeaker-voxceleb-resnet34-LM /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM
 
 RUN mkdir -p ~/.cache/torch/hub/checkpoints/
 RUN wget -O ~/.cache/torch/whisperx-vad-segmentation.bin \
