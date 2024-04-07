@@ -10,8 +10,6 @@
 
 ## 1. Micro Services
 
-
-
 | Name | Description | Registry |
 | ---- | ----------- | ----- |
 | [ASR (whisper)](/containers/whisper-server/README.md)  | Auto Speech Recognition | registry.cn-hangzhou.aliyuncs.com/kenplusplus/whisper-server |
