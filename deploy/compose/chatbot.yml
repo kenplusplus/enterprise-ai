@@ -1,0 +1,9 @@
+services:
+  asr:
+    image: registry.cn-hangzhou.aliyuncs.com/kenplusplus/faster-whisper-server:latest
+    ports:
+      - "5000:5000"
+  tts:
+    image: registry.cn-hangzhou.aliyuncs.com/kenplusplus/openvoice-server:latest
+    ports:
+      - "5500:5500"
