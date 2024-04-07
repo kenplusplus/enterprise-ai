@@ -7,6 +7,7 @@ from io import BytesIO
 import dotenv
 import logging
 import torch
+import datetime
 
 # Check if NVIDIA GPU is available
 torch.cuda.is_available()
@@ -60,7 +61,11 @@ def create_transcription(file: Annotated[bytes, File()],
 
     # add min/max number of speakers if known
     print("Step3: Diarize the speakers ...")
+
+    start = datetime.datetime.now()
     diarize_segments = diarize_model(audio)
+    end = datetime.datetime.now()
+    print("Duration of Diarization is ", str(end-start))
     # diarize_model(audio, min_speakers=min_speakers, max_speakers=max_speakers)
     print("Step4: Assign workers ...")
     result = whisperx.assign_word_speakers(diarize_segments, result)

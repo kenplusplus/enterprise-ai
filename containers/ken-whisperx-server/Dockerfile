@@ -16,9 +16,10 @@ ARG pip_mirror="-i https://mirrors.aliyun.com/pypi/simple/"
 RUN pip install huggingface_hub ${pip_mirror}
 RUN huggingface-cli login --token ${hf_token}
 
-RUN huggingface-cli download --resume-download --repo-type model pyannote/speaker-diarization-3.1
+RUN huggingface-cli download --resume-download --repo-type model pyannote/speaker-diarization-3.0
+RUN huggingface-cli download --resume-download --repo-type model hbredin/wespeaker-voxceleb-resnet34-LM
 RUN huggingface-cli download --resume-download --repo-type model pyannote/segmentation-3.0
-
+ENV HF_ENDPOINT="https://hf-mirror.com"
 RUN huggingface-cli download --resume-download --repo-type model jonatasgrosman/wav2vec2-large-xlsr-53-chinese-zh-cn
 #RUN huggingface-cli download --resume-download --repo-type model Systran/faster-whisper-large-v3
 #RUN huggingface-cli download --resume-download --repo-type model Systran/faster-whisper-base
@@ -26,7 +27,7 @@ RUN huggingface-cli download --resume-download --repo-type model Systran/faster-
 RUN huggingface-cli download --resume-download --repo-type model pyannote/wespeaker-voxceleb-resnet34-LM
 RUN mkdir -p /root/.cache/torch/pyannote
 RUN ln -s /root/.cache/huggingface/hub/models--pyannote--segmentation-3.0 /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0
-RUN ln -s /root/.cache/huggingface/hub/models--pyannote--speaker-diarization-3.1 /root/.cache/torch/pyannote/models--pyannote--speaker-diarization-3.1
+RUN ln -s /root/.cache/huggingface/hub/models--pyannote--speaker-diarization-3.0 /root/.cache/torch/pyannote/models--pyannote--speaker-diarization-3.0
 RUN ln -s /root/.cache/huggingface/hub/models--pyannote--wespeaker-voxceleb-resnet34-LM /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM
 
 RUN mkdir -p ~/.cache/torch/hub/checkpoints/
@@ -40,8 +41,6 @@ RUN wget -O ~/.cache/torch/hub/checkpoints/wav2vec2_fairseq_base_ls960_asr_ls960
 # ===
 
 FROM base
-
-ARG pip_mirror=""
 
 RUN apt-get install procps -y
 
