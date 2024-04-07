@@ -24,14 +24,14 @@
 ## 3. Models
 Following models are used:
 
-| Name | Micro Services | Description |
-| ---- | -------------- | ----------- |
-| [Trelis/Llama-2-7b-chat-hf-shared-bf16](https://huggingface.co/Trelis/Llama-2-7b-chat-hf-sharded-bf16) | [FastChat](/containers/fastchat-server/README.md) | LLM model using BF16 for AMX |
-| [lmsys/vicuna-7b-v1.3](https://huggingface.co/lmsys/vicuna-7b-v1.3) | [FastChat](/containers/fastchat-server/README.md) | LLM model using INT8 for VNNI |
-| [Systran/faster-whisper-tiny](https://huggingface.co/Systran/faster-whisper-tiny) | [faster-whisper](/containers/faster-whisper-server/README.md) | Speech Recognition model |
-| [pyannote/speaker-diarization-3.1](https://huggingface.co/pyannote/speaker-diarization-3.1) | [ken-whisperx-server](/containers/ken-whisperx-server/README.md) | Speaker Diarize |
-| [pyannote/segmentation-3.0](https://huggingface.co/pyannote/segmentation-3.0) | [ken-whisperx-server](/containers/ken-whisperx-server/README.md) | Speech Segmentation |
-| [jonatasgrosman/wav2vec2-large-xlsr-53-chinese-zh-cn](https://huggingface.co/jonatasgrosman/wav2vec2-large-xlsr-53-chinese-zh-cn) | [ken-whisperx-server](/containers/ken-whisperx-server/README.md) | Chinese Speech to vector |
-| [pyannote/wespeaker-voxceleb-resnet34-LM](https://huggingface.co/pyannote/wespeaker-voxceleb-resnet34-LM) | [ken-whisperx-server](/containers/ken-whisperx-server/README.md) | Extract embedding  |
-| [silero-vad](https://github.com/snakers4/silero-vad) | [openvoice-server](/containers/openvoice-server/README.md) |  Voice Activity Detector  |
-| [whisper(small)](https://openaipublic.azureedge.net/main/whisper/models/9ecf779972d90ba49c06d968637d720dd632c55bbf19d441fb42bf17a411e794/small.pt)| [whisper-server](/containers/whisper-server/README.md) | OpenAI whisper model |
+| Name | Size | Micro Services | Description |
+| ---- | ---- | -------------- | ----------- |
+| [Trelis/Llama-2-7b-chat-hf-shared-bf16](https://huggingface.co/Trelis/Llama-2-7b-chat-hf-sharded-bf16) | 25G | [FastChat](/containers/fastchat-server/README.md) | LLM model using BF16 for AMX |
+| [lmsys/vicuna-7b-v1.3](https://huggingface.co/lmsys/vicuna-7b-v1.3) | 13.5G | [FastChat](/containers/fastchat-server/README.md) | LLM model using INT8 for VNNI |
+| [Systran/faster-whisper-tiny](https://huggingface.co/Systran/faster-whisper-tiny) | 75M |[faster-whisper](/containers/faster-whisper-server/README.md) | Speech Recognition model |
+| [pyannote/speaker-diarization-3.1](https://huggingface.co/pyannote/speaker-diarization-3.1) | 14M | [ken-whisperx-server](/containers/ken-whisperx-server/README.md) | Speaker Diarize |
+| [pyannote/segmentation-3.0](https://huggingface.co/pyannote/segmentation-3.0) | 5.8M | [ken-whisperx-server](/containers/ken-whisperx-server/README.md) | Speech Segmentation |
+| [jonatasgrosman/wav2vec2-large-xlsr-53-chinese-zh-cn](https://huggingface.co/jonatasgrosman/wav2vec2-large-xlsr-53-chinese-zh-cn) | 2.4G | [ken-whisperx-server](/containers/ken-whisperx-server/README.md) | Chinese Speech to vector |
+| [pyannote/wespeaker-voxceleb-resnet34-LM](https://huggingface.co/pyannote/wespeaker-voxceleb-resnet34-LM) | 51M | [ken-whisperx-server](/containers/ken-whisperx-server/README.md) | Extract embedding  |
+| [silero-vad](https://github.com/snakers4/silero-vad) | 17M | [openvoice-server](/containers/openvoice-server/README.md) |  Voice Activity Detector  |
+| [whisper(small)](https://openaipublic.azureedge.net/main/whisper/models/9ecf779972d90ba49c06d968637d720dd632c55bbf19d441fb42bf17a411e794/small.pt)| 244M | [whisper-server](/containers/whisper-server/README.md) | OpenAI whisper model |
