@@ -19,7 +19,6 @@
 | [TTS (OpenVoice)](/containers/openvoice-server/README.md) | Text to Speech | registry.cn-hangzhou.aliyuncs.com/kenplusplus/openvoice-server |
 | [TTS （OpenTTS)](/containers/opentts-server/) | Text to Speech | registry.cn-hangzhou.aliyuncs.com/kenplusplus/opentts-server |
 
-Registry:
 ## 2. Develop
 
 Example:
