@@ -29,9 +29,19 @@ services:
       - MODEL_WORKER_PORT=21002
       - MODEL_NAME="chatglm2"
       - CPU_ISA="amx"
-      - TRUST_REMOTE_CODE=true
     command: /home/ubuntu/start-chat.sh -r /home/ubuntu/fastchat -t model -m /home/ubuntu/model/
     volumes:
       - ./model:/home/ubuntu/model/
     ports:
       - "21002:21002"
+  fastchat-apiserver:
+    image: registry.cn-hangzhou.aliyuncs.com/kenplusplus/fastchat-server:latest
+    environment:
+      - CONTROLLER_SVC=fastchat-controller
+      - CONTROLLER_PORT=21001
+      - OPENAI_API_PORT=9001
+    command: /home/ubuntu/start-chat.sh -r /home/ubuntu/fastchat -t apiserver
+    volumes:
+      - ./model:/home/ubuntu/model/
+    ports:
+      - "9001:9001"
