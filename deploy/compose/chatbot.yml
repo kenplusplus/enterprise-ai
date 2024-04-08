@@ -7,3 +7,31 @@ services:
     image: registry.cn-hangzhou.aliyuncs.com/kenplusplus/openvoice-server:latest
     ports:
       - "5500:5500"
+  fastchat-controller:
+    image: registry.cn-hangzhou.aliyuncs.com/kenplusplus/fastchat-server:latest
+    command: /home/ubuntu/start-chat.sh -r /home/ubuntu/fastchat -t controller
+    ports:
+      - "21001:21001"
+  fastchat-ui:
+    image: registry.cn-hangzhou.aliyuncs.com/kenplusplus/fastchat-server:latest
+    environment:
+      - CONTROLLER_SVC=fastchat-controller
+      - CONTROLLER_PORT=21001
+    command: /home/ubuntu/start-chat.sh -r /home/ubuntu/fastchat -t ui
+    ports:
+      - "9000:9000"
+  fastchat-worker-chatglm2-amx:
+    image: registry.cn-hangzhou.aliyuncs.com/kenplusplus/fastchat-server:latest
+    environment:
+      - CONTROLLER_SVC=fastchat-controller
+      - CONTROLLER_PORT=21001
+      - MODEL_WORKER_SVC=fastchat-worker-chatglm2-amx
+      - MODEL_WORKER_PORT=21002
+      - MODEL_NAME="chatglm2"
+      - CPU_ISA="amx"
+      - TRUST_REMOTE_CODE=true
+    command: /home/ubuntu/start-chat.sh -r /home/ubuntu/fastchat -t model -m /home/ubuntu/model/
+    volumes:
+      - ./model:/home/ubuntu/model/
+    ports:
+      - "21002:21002"
