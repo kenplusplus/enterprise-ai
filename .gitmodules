@@ -5,7 +5,7 @@
 	path = containers/whisper-server/whisper
 	url = https://github.com/kenplusplus/whisper.git
 [submodule "containers/ken-whisperx-server/whisperx"]
-	path = containers/ken-whisperx-server/whisperx
+	path = containers/whisperx-server/whisperx
 	url = https://github.com/kenplusplus/whisperX.git
 [submodule "containers/openvoice-server/OpenVoice"]
 	path = containers/openvoice-server/OpenVoice
