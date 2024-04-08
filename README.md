@@ -22,10 +22,12 @@
 | [TTS （OpenTTS)](/containers/opentts-server/) | Text to Speech | registry.cn-hangzhou.aliyuncs.com/kenplusplus/opentts-server |
 
 ## 3. Models
+
 Following models are used:
 
 | Name | Size | Micro Services | Description |
 | ---- | ---- | -------------- | ----------- |
+| [THUDM/chatglm2-6b](https://github.com/THUDM/ChatGLM2-6B) | 12G | [FastChat](/containers/fastchat-server/README.md) | LLM model |
 | [Trelis/Llama-2-7b-chat-hf-shared-bf16](https://huggingface.co/Trelis/Llama-2-7b-chat-hf-sharded-bf16) | 25G | [FastChat](/containers/fastchat-server/README.md) | LLM model using BF16 for AMX |
 | [lmsys/vicuna-7b-v1.3](https://huggingface.co/lmsys/vicuna-7b-v1.3) | 13.5G | [FastChat](/containers/fastchat-server/README.md) | LLM model using INT8 for VNNI |
 | [Systran/faster-whisper-tiny](https://huggingface.co/Systran/faster-whisper-tiny) | 75M |[faster-whisper](/containers/faster-whisper-server/README.md) | Speech Recognition model |
