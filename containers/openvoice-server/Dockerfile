@@ -20,7 +20,7 @@ COPY . .
 ARG pip_mirror=""
 RUN pip3 install -r ./OpenVoice/requirements.txt
 
-RUN mv /checkpoints.zip ./OpenVoice/ && cd ./OpenVoice && unzip checkpoints.zip
+RUN mv /checkpoints.zip ./OpenVoice/ && cd ./OpenVoice && unzip -o checkpoints.zip
 
 
 EXPOSE 5500
