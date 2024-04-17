@@ -3,15 +3,15 @@
 1.1 Start the server
 
 ```shell
-docker pull registry.cn-hangzhou.aliyuncs.com/kenplusplus/ken-whisper-server:latest
+docker pull registry.cn-hangzhou.aliyuncs.com/kenplusplus/whisperx-server:latest
 
-docker run -it -p 5001:5000 registry.cn-hangzhou.aliyuncs.com/kenplusplus/ken-whisper-server:latest
+docker run -it -p 5000:5000 registry.cn-hangzhou.aliyuncs.com/kenplusplus/whisperx-server:latest
 ```
 
 1.2 Test from client
 
 ```shell
-curl -X 'POST' -F 'file=@test.mp3' http://localhost:5001/v1/audio/transcriptions
+curl -X 'POST' -F 'file=@test.mp3' http://localhost:5000/v1/audio/transcriptions
 ```
 
 The example output json is [here](/containers/ken-whisperx-server/example_openai_output.json).
