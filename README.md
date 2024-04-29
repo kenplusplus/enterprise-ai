@@ -47,7 +47,7 @@ Following models are used:
 | [silero-vad](https://github.com/snakers4/silero-vad) | 17M | [openvoice-server](/xim/openvoice-server/README.md) |  Voice Activity Detector  |
 | [whisper(small)](https://openaipublic.azureedge.net/main/whisper/models/9ecf779972d90ba49c06d968637d720dd632c55bbf19d441fb42bf17a411e794/small.pt)| 244M | [whisper-server](/xim/whisper-server/README.md) | OpenAI whisper model |
 
-## 4. Business Pipeline Ochrestration
+## 4. Business Pipeline Orchestration
 
 ### 4.1 Flowise
 TBD
@@ -55,7 +55,7 @@ TBD
 ### 4.2 Dify
 TBD
 
-## 5. Cloud Native Services Ochrestration
+## 5. Cloud Native Services Orchestration
 TBD
 
 ### 5.1 Scalability for Concurrent
