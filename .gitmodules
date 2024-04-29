@@ -16,3 +16,6 @@
 [submodule "containers/faster-whisper-server/faster-whisper"]
 	path = xim/faster-whisper-server/faster-whisper
 	url = https://github.com/lewangdev/faster-whisper
+[submodule "externals/opea/GenAIExamples"]
+	path = externals/opea/GenAIExamples
+	url = https://github.com/opea-project/GenAIExamples
