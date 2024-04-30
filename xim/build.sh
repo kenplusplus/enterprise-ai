@@ -5,7 +5,7 @@ set -e
 
 current_directory=$(readlink -f "$(dirname "${BASH_SOURCE[0]}")")
 top_directory=$(dirname "${current_directory}")
-container_directory="${top_directory}/containers"
+container_directory="${top_directory}/xim"
 action="all"
 registry="registry.cn-hangzhou.aliyuncs.com/kenplusplus"
 container="all"
