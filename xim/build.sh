@@ -7,7 +7,7 @@ current_directory=$(readlink -f "$(dirname "${BASH_SOURCE[0]}")")
 top_directory=$(dirname "${current_directory}")
 container_directory="${top_directory}/xim"
 action="all"
-registry="registry.cn-hangzhou.aliyuncs.com/kenplusplus"
+registry="gar-registry.caas.intel.com/cpio"
 container="all"
 tag="latest"
 docker_build_clean_param=""
@@ -86,6 +86,7 @@ function build_a_image {
         "--build-arg" "no_proxy"
         "--build-arg" "pip_mirror"
         "--build-arg" "hf_token"
+        "--build-arg" "HF_ENDPOINT"
         "-f" "${container_directory}/${img_container}/Dockerfile"
         .
         "--tag" "${registry}/${img_container}:${tag}"
