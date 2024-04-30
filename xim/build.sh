@@ -86,6 +86,8 @@ function build_a_image {
         "--build-arg" "no_proxy"
         "--build-arg" "pip_mirror"
         "--build-arg" "hf_token"
+        "--build-arg" "HF_TOKEN"
+        "--build-arg" "hf_endpoint"
         "--build-arg" "HF_ENDPOINT"
         "-f" "${container_directory}/${img_container}/Dockerfile"
         .
