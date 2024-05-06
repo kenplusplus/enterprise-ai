@@ -8,6 +8,19 @@ native framework which is part of [OPEA(Open Platform Enterprise AI)](https://gi
 
 ![](/docs/xim-opea-overall.png)
 
+Xeon Inference Microservice (XIM) is a scalable and stateless container service
+exposing standard resful APIs. It allow Intel accelerators to optimize the
+inference engine and customized model for AIGC workload.
+
+![](/docs/xim-arch.png)
+
+| Layer name | Description |
+| ---------- | ----------- |
+| Accelerators | A XIM could be optimized by any of Intel Accelerators like AMX/VNNI/AVX512 etc |
+| Optimized Engine | Intel provide many engine for different purposes like OneAPI, xFT, IPEX |
+| Models | A model can be customized for xFT format in different Quantization like BF16/INT8/FP4 etc |
+| Microservices | A container services with stateless design to support scalable ochrestartion |
+| API | LangChain/LlamaIndex and existing vendor like OpenAI provide industrial standard restfule API to expsoe service|
 
 ## 2. Business Pipeline
 
