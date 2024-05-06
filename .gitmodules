@@ -1,20 +1,20 @@
 [submodule "containers/ken-opentts-server/opentts"]
-	path = xim/opentts-server/opentts
+	path = xim/opentts/opentts
 	url = https://github.com/kenplusplus/opentts.git
 [submodule "containers/ken-whisper-server/whisper"]
-	path = xim/whisper-server/whisper
+	path = xim/whisper/whisper
 	url = https://github.com/kenplusplus/whisper.git
 [submodule "containers/ken-whisperx-server/whisperx"]
-	path = xim/whisperx-server/whisperx
+	path = xim/whisperx/whisperx
 	url = https://github.com/kenplusplus/whisperX.git
 [submodule "containers/openvoice-server/OpenVoice"]
-	path = xim/openvoice-server/OpenVoice
+	path = xim/openvoice/OpenVoice
 	url = https://github.com/kenplusplus/OpenVoice.git
 [submodule "containers/fastchat-server/fastchat"]
-	path = xim/fastchat-server/fastchat
+	path = xim/fastchat/fastchat
 	url = https://github.com/kenplusplus/FastChat.git
 [submodule "containers/faster-whisper-server/faster-whisper"]
-	path = xim/faster-whisper-server/faster-whisper
+	path = xim/faster-whisper/faster-whisper
 	url = https://github.com/lewangdev/faster-whisper
 [submodule "externals/opea/GenAIExamples"]
 	path = externals/opea/GenAIExamples
