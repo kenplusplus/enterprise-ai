@@ -22,6 +22,8 @@ inference engine and customized model for AIGC workload.
 | Microservices | A container services with stateless design to support scalable ochrestartion |
 | API | LangChain/LlamaIndex and existing vendor like OpenAI provide industrial standard restfule API to expsoe service|
 
+Please refer [here](/docs/xim.md) for more details.
+
 ## 2. Business Pipeline
 
 ### 2.1 ChatBot Pipeline
