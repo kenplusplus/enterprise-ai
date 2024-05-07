@@ -1,4 +1,4 @@
-FROM gar-registry.caas.intel.com/cpio/vllm-xft-base:latest AS build
+FROM ccr-registry.caas.intel.com/opea-xim/vllm-xft-base:latest AS build
 ARG HF_ENDPOINT
 ARG HF_TOKEN
 
@@ -26,7 +26,7 @@ RUN rm /root/.cache/huggingface/ /data/Qwen-7B-Chat/ -fr
 
 
 # Copy files to target image
-FROM gar-registry.caas.intel.com/cpio/vllm-xft-base:latest
+FROM ccr-registry.caas.intel.com/opea-xim/vllm-xft-base:latest
 
 COPY --from=build /data /data
 
