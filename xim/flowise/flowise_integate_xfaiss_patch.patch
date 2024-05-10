@@ -775,7 +775,7 @@ index 00000000..1cef551e
 +}
 diff --git a/packages/components/nodes/vectorstores/xFaiss/langchain/xfaiss.cjs b/packages/components/nodes/vectorstores/xFaiss/langchain/xfaiss.cjs
 new file mode 100644
-index 00000000..58b60e16
+index 00000000..fb05eb05
 --- /dev/null
 +++ b/packages/components/nodes/vectorstores/xFaiss/langchain/xfaiss.cjs
 @@ -0,0 +1,397 @@
@@ -890,8 +890,8 @@ index 00000000..58b60e16
 +        }
 +        const dv = vectors[0].length;
 +        if (!this._index) {
-+            const { IndexFlatL2 } = await FaissStore.importFaiss();
-+            this._index = new IndexFlatL2(dv);
++            const { IndexFlatIP } = await FaissStore.importFaiss();
++            this._index = new IndexFlatIP(dv);
 +        }
 +        const d = this.index.getDimension();
 +        if (dv !== d) {
@@ -990,8 +990,8 @@ index 00000000..58b60e16
 +    async mergeFrom(targetIndex) {
 +        const targetIndexDimensions = targetIndex.index.getDimension();
 +        if (!this._index) {
-+            const { IndexFlatL2 } = await FaissStore.importFaiss();
-+            this._index = new IndexFlatL2(targetIndexDimensions);
++            const { IndexFlatIP } = await FaissStore.importFaiss();
++            this._index = new IndexFlatIP(targetIndexDimensions);
 +        }
 +        const d = this.index.getDimension();
 +        if (targetIndexDimensions !== d) {
@@ -1027,8 +1027,8 @@ index 00000000..58b60e16
 +            .readFile(path.join(directory, "docstore.json"), "utf8")
 +            .then(JSON.parse);
 +        const readIndex = async (directory) => {
-+            const { IndexFlatL2 } = await this.importFaiss();
-+            return IndexFlatL2.read(path.join(directory, "faiss.index"));
++            const { IndexFlatIP } = await this.importFaiss();
++            return IndexFlatIP.read(path.join(directory, "faiss.index"));
 +        };
 +        const [[docstoreFiles, mapping], index] = await Promise.all([
 +            readStore(directory),
@@ -1086,8 +1086,8 @@ index 00000000..58b60e16
 +            return { store, mapping };
 +        };
 +        const readIndex = async (directory) => {
-+            const { IndexFlatL2 } = await this.importFaiss();
-+            return IndexFlatL2.read(path.join(directory, "index.faiss"));
++            const { IndexFlatIP } = await this.importFaiss();
++            return IndexFlatIP.read(path.join(directory, "index.faiss"));
 +        };
 +        const [store, index] = await Promise.all([
 +            readStore(directory),
@@ -1157,7 +1157,7 @@ index 00000000..58b60e16
 +            // const { default: { IndexFlatL2 }, } = await import("faiss-node");
 +            const { IndexFlatL2, Index, IndexFlatIP, MetricType } = require('/mnt/home0/jasper/faiss/xfaiss-node/faiss-node/build/Release/xfaiss-node.node');
 +            console.warn(`[ZJJDBG2]langchain->import xfaiss-node.node`);
-+            return { IndexFlatL2 };
++            return { IndexFlatIP };
 +            // eslint-disable-next-line @typescript-eslint/no-explicit-any
 +        }
 +        catch (err) {
@@ -1178,11 +1178,11 @@ index 00000000..58b60e16
 +exports.FaissStore = FaissStore;
 diff --git a/packages/components/nodes/vectorstores/xFaiss/langchain/xfaiss.d.ts b/packages/components/nodes/vectorstores/xFaiss/langchain/xfaiss.d.ts
 new file mode 100644
-index 00000000..ba423014
+index 00000000..f3b83371
 --- /dev/null
 +++ b/packages/components/nodes/vectorstores/xFaiss/langchain/xfaiss.d.ts
 @@ -0,0 +1,127 @@
-+import type { IndexFlatL2 } from "faiss-node";
++import type { IndexFlatIP } from "faiss-node";
 +import type { NameRegistry, Parser } from "pickleparser";
 +import type { EmbeddingsInterface } from "@langchain/core/embeddings";
 +import { SaveableVectorStore } from "@langchain/core/vectorstores";
@@ -1194,7 +1194,7 @@ index 00000000..ba423014
 + */
 +export interface FaissLibArgs {
 +    docstore?: SynchronousInMemoryDocstore;
-+    index?: IndexFlatL2;
++    index?: IndexFlatIP;
 +    mapping?: Record<number, string>;
 +}
 +/**
@@ -1203,7 +1203,7 @@ index 00000000..ba423014
 + * vectors.
 + */
 +export declare class FaissStore extends SaveableVectorStore {
-+    _index?: IndexFlatL2;
++    _index?: IndexFlatIP;
 +    _mapping: Record<number, string>;
 +    docstore: SynchronousInMemoryDocstore;
 +    args: FaissLibArgs;
@@ -1219,7 +1219,7 @@ index 00000000..ba423014
 +    addDocuments(documents: Document[], options?: {
 +        ids?: string[];
 +    }): Promise<string[]>;
-+    get index(): IndexFlatL2;
++    get index(): IndexFlatIP;
 +    private set index(value);
 +    /**
 +     * Adds an array of vectors and their corresponding Document objects to
@@ -1302,7 +1302,7 @@ index 00000000..ba423014
 +        docstore?: SynchronousInMemoryDocstore;
 +    }): Promise<FaissStore>;
 +    static importFaiss(): Promise<{
-+        IndexFlatL2: typeof IndexFlatL2;
++        IndexFlatIP: typeof IndexFlatIP;
 +    }>;
 +    static importPickleparser(): Promise<{
 +        Parser: typeof Parser;
@@ -1311,7 +1311,7 @@ index 00000000..ba423014
 +}
 diff --git a/packages/components/nodes/vectorstores/xFaiss/langchain/xfaiss.js b/packages/components/nodes/vectorstores/xFaiss/langchain/xfaiss.js
 new file mode 100644
-index 00000000..c057e3f0
+index 00000000..3759f152
 --- /dev/null
 +++ b/packages/components/nodes/vectorstores/xFaiss/langchain/xfaiss.js
 @@ -0,0 +1,370 @@
@@ -1400,8 +1400,8 @@ index 00000000..c057e3f0
 +        }
 +        const dv = vectors[0].length;
 +        if (!this._index) {
-+            const { IndexFlatL2 } = await FaissStore.importFaiss();
-+            this._index = new IndexFlatL2(dv);
++            const { IndexFlatIP } = await FaissStore.importFaiss();
++            this._index = new IndexFlatIP(dv);
 +        }
 +        const d = this.index.getDimension();
 +        if (dv !== d) {
@@ -1500,8 +1500,8 @@ index 00000000..c057e3f0
 +    async mergeFrom(targetIndex) {
 +        const targetIndexDimensions = targetIndex.index.getDimension();
 +        if (!this._index) {
-+            const { IndexFlatL2 } = await FaissStore.importFaiss();
-+            this._index = new IndexFlatL2(targetIndexDimensions);
++            const { IndexFlatIP } = await FaissStore.importFaiss();
++            this._index = new IndexFlatIP(targetIndexDimensions);
 +        }
 +        const d = this.index.getDimension();
 +        if (targetIndexDimensions !== d) {
@@ -1536,8 +1536,8 @@ index 00000000..c057e3f0
 +            .readFile(path.join(directory, "docstore.json"), "utf8")
 +            .then(JSON.parse);
 +        const readIndex = async (directory) => {
-+            const { IndexFlatL2 } = await this.importFaiss();
-+            return IndexFlatL2.read(path.join(directory, "faiss.index"));
++            const { IndexFlatIP } = await this.importFaiss();
++            return IndexFlatIP.read(path.join(directory, "faiss.index"));
 +        };
 +        const [[docstoreFiles, mapping], index] = await Promise.all([
 +            readStore(directory),
@@ -1595,8 +1595,8 @@ index 00000000..c057e3f0
 +            return { store, mapping };
 +        };
 +        const readIndex = async (directory) => {
-+            const { IndexFlatL2 } = await this.importFaiss();
-+            return IndexFlatL2.read(path.join(directory, "index.faiss"));
++            const { IndexFlatIP } = await this.importFaiss();
++            return IndexFlatIP.read(path.join(directory, "index.faiss"));
 +        };
 +        const [store, index] = await Promise.all([
 +            readStore(directory),
@@ -1667,7 +1667,7 @@ index 00000000..c057e3f0
 +            const { IndexFlatL2, Index, IndexFlatIP, MetricType } = require('./node/xfaiss-node.node');
 +            console.warn(`[ZJJDBG2]import xfaiss-node.node`);
 +
-+            return { IndexFlatL2 };
++            return { IndexFlatIP };
 +            // eslint-disable-next-line @typescript-eslint/no-explicit-any
 +        }
 +        catch (err) {

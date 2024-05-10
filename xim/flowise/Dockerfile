@@ -7,8 +7,8 @@ RUN cd /root
 RUN apt update && apt install -y git nodejs curl build-essential cmake wget
 RUN cd /root && git clone https://github.com/FlowiseAI/Flowise.git \
     && cd Flowise && git checkout 43b22476e30ea0831a01d6a93febd5678772a93a
-COPY ./xFlowise_patch0508.patch /root/Flowise/
-RUN cd /root/Flowise/ && git apply ./xFlowise_patch0508.patch && mkdir -p ./packages/components/nodes/vectorstores/xFaiss/langchain/node/
+COPY ./flowise_integate_xfaiss_patch.patch /root/Flowise/
+RUN cd /root/Flowise/ && git apply ./flowise_integate_xfaiss_patch.patch && mkdir -p ./packages/components/nodes/vectorstores/xFaiss/langchain/node/
 COPY ./xfaiss-node.node /root/Flowise/packages/components/nodes/vectorstores/xFaiss/langchain/node/
 RUN cd /root/Flowise && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash \
     && export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" \
