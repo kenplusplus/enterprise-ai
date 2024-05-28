@@ -35,7 +35,9 @@ class Embedding(Worker):
         batch_size = 16
         seq_length = 512
         d = torch.randint(vocab_size, size=[batch_size, seq_length])
-        self.model = torch.jit.trace(self.model, example_inputs=d, check_trace=False, strict=False)
+        t = torch.randint(0, 1, size=[batch_size, seq_length])
+        m = torch.randint(1, 2, size=[batch_size, seq_length])
+        self.model = torch.jit.trace(self.model, [d, t, m], check_trace=False, strict=False)
         self.model = torch.jit.freeze(self.model)
 
     def get_embedding_with_token_count(
@@ -60,8 +62,7 @@ class Embedding(Worker):
         inputs = encoded_input.to(self.device)
         token_count = inputs["attention_mask"].sum(dim=1).tolist()[0]
         # Compute token embeddings
-        #model_output = self.model(**inputs)
-        model_output = self.model(inputs['input_ids'])
+        model_output = self.model(**inputs)
         # Perform pooling
         sentence_embeddings = mean_pooling(model_output, inputs["attention_mask"])
         # Normalize embeddings
