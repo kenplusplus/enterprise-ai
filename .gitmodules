@@ -19,3 +19,6 @@
 [submodule "externals/opea/GenAIExamples"]
 	path = externals/opea/GenAIExamples
 	url = https://github.com/opea-project/GenAIExamples
+[submodule "xim/meeting-summary"]
+	path = xim/meeting-summary
+	url = https://github.com/kenplusplus/meeting-summary-server
