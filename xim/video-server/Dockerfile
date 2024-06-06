@@ -1,7 +1,7 @@
 From ubuntu:20.04
 ARG DEBIAN_FRONTEND=noninteractive
 
-RUN apt update && apt install -y python3 python3-pip
+RUN apt update && apt install -y python3 python3-pip wget
 RUN pip3 install flask uuid
 
 COPY ./video_server.py /root/
