@@ -23,7 +23,7 @@ def clear_directory(directory):
         elif os.path.isdir(item_path):
             shutil.rmtree(item_path)
 
-@app.route('/api/videomixer', methods=['POST'])
+@app.route('/api/videosvr', methods=['POST'])
 def merge_videos():
     data = request.get_json()
     app.logger.info('Received request to merge videos with data: %s', data)
@@ -61,6 +61,6 @@ def download_video(url, path):
 if __name__ == '__main__':
     if not os.path.exists(DOWNLOAD_FOLDER):
         os.makedirs(DOWNLOAD_FOLDER)
-    app.run(debug=True, port=7070)
+    app.run(debug=True, host='0.0.0.0', port=7070)
 
 
