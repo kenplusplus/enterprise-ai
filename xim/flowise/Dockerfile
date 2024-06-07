@@ -2,7 +2,7 @@ From ubuntu:22.04
 ARG DEBIAN_FRONTEND=noninteractive
 
 ARG XFLOWISE_REPO="https://github.com/intel-sandbox/xflowise"
-ARG XFLOWISE_VER="a0415212e53ca880c3512b49d9165df23337d8d5"
+ARG XFLOWISE_VER="9e5efd55711cc43d54a45b5532f3bb38385b3380"
 
 RUN apt update
 RUN apt install -y git nodejs curl build-essential cmake wget
