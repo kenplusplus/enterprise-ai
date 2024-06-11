@@ -27,21 +27,33 @@ def clear_directory(directory):
 def merge_videos():
     data = request.get_json()
     app.logger.info('Received request to merge videos with data: %s', data)
-    url1 = data.get('url1')
-    url2 = data.get('url2')
+    video_url1 = data.get('video_url1')
+    video_url2 = data.get('video_url2')
+    audio_url = data.get('audio_url')
+    subtitle_url = data.get('subtitle_url')
 
     unique_filename = str(uuid.uuid4())
     clear_directory(DOWNLOAD_FOLDER)
     src1 = os.path.join(DOWNLOAD_FOLDER, f"{unique_filename}_video1.mp4")
     src2 = os.path.join(DOWNLOAD_FOLDER, f"{unique_filename}_video2.mp4")
-    dst = os.path.join(DOWNLOAD_FOLDER, f"{unique_filename}_merged.mp4")
+    src3 = os.path.join(DOWNLOAD_FOLDER, f"{unique_filename}_audio.mp3")
+    src4 = os.path.join(DOWNLOAD_FOLDER, f"{unique_filename}_subtitle.srt")
+    dst1 = os.path.join(DOWNLOAD_FOLDER, f"{unique_filename}_merged.mp4")
+    dst2 = os.path.join(DOWNLOAD_FOLDER, f"{unique_filename}_merged_with_audio.mp4")
+    dst3 = os.path.join(DOWNLOAD_FOLDER, f"{unique_filename}_final.mp4")
 
-    download_video(url1, src1)
-    download_video(url2, src2)
+    download_src(video_url1, src1)
+    download_src(video_url2, src2)
+    download_src(audio_url, src3)
+    download_src(subtitle_url, src4)
     app.logger.info('Video merging...')
     subprocess.call(["/root/ffmpeg", "-i", src1, "-i", src2, "-filter_complex",
-                     "[0:v][0:a][1:v][1:a]concat=n=2:v=1:a=1", "-vsync", "vfr", dst])
-    download_url = f"http://{request.host}/download/data/{os.path.basename(dst)}"
+                     "[0:v][1:v]concat=n=2:v=1:a=0[v]", "-map", "[v]", dst1])
+    subprocess.call(["/root/ffmpeg", "-i", dst1, "-i", src3, "-c:v",
+                     "copy", "-map", "0:v", "-map", "1:a", "-shortest", dst2])
+    subprocess.call(["/root/ffmpeg", "-i", dst2, "-vf", f"subtitles={src4}", "-c:a",
+                     "copy", dst3])
+    download_url = f"http://{request.host}/download/data/{os.path.basename(dst3)}"
     app.logger.info('Video merged successfully, download URL: %s', download_url)
     return jsonify({'download_url': download_url})
 
@@ -55,7 +67,7 @@ def download_file(directory_alias, filename):
     else:
         abort(404)
 
-def download_video(url, path):
+def download_src(url, path):
     subprocess.call(['wget', '-O', path, url])
 
 if __name__ == '__main__':

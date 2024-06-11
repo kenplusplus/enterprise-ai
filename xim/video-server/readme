@@ -24,7 +24,7 @@ docker run -itd -p 7070:7070 videosvr:latest
 - Restful API by curl
 ```shell
 Input：
-curl -X POST http://127.0.0.1:7070/api/videosvr -H "Content-Type: application/json" -d '{"url1": "http://127.0.0.1:7070/download/sample/src1.mp4", "url2": "http://127.0.0.1:7070/download/sample/src2.mp4"}'
+curl -X POST http://127.0.0.1:7070/api/videosvr -H "Content-Type: application/json" -d '{"video_url1": "http://127.0.0.1:7070/download/sample/video_src1.mp4", "video_url2": "http://127.0.0.1:7070/download/sample/video_src2.mp4", "audio_url": "http://127.0.0.1:7070/download/sample/audio.mp3", "subtitle_url": "http://127.0.0.1:7070/download/sample/subtitle.srt"}'
 Output:
 {
   "download_url": "http://127.0.0.1:7070/download/data/12345997-1ed8-4921-9e72-7cab7996ef8f_merged.mp4"
