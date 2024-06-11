@@ -8,6 +8,12 @@ This service is used to concatenate two videos.
 ```shell
 docker build -t videosvr:latest .
 ```
+If you run in proxy network, please add below section into dockerfile
+```
+ENV HTTP_PROXY=http://child-prc.intel.com:913
+ENV HTTPS_PROXY=http://child-prc.intel.com:913
+ENV NO_PROXY=intel.com,.intel.com,localhost,127.0.0.1
+```
 
 ### 2.2 Launch server
 ```shell
