@@ -11,7 +11,6 @@ from llmspec import EmbeddingData, EmbeddingRequest, EmbeddingResponse, TokenUsa
 from mosec import ClientError, Runtime, Server, Worker
 
 import intel_extension_for_pytorch as ipex
-#from optimum.intel import IPEXModel
 
 DEFAULT_MODEL = "/root/bge-large-zh/"
 
@@ -24,7 +23,6 @@ class Embedding(Worker):
         self.device = (
             torch.cuda.current_device() if torch.cuda.is_available() else "cpu"
         )
-        #self.model = IPEXModel.from_pretrained(self.model_name, torch_dtype=torch.bfloat16)
 
         self.model = self.model.to(self.device)
         self.model.eval()
@@ -39,6 +37,7 @@ class Embedding(Worker):
         m = torch.randint(1, 2, size=[batch_size, seq_length])
         self.model = torch.jit.trace(self.model, [d, t, m], check_trace=False, strict=False)
         self.model = torch.jit.freeze(self.model)
+        self.model(d, t, m)
 
     def get_embedding_with_token_count(
         self, sentences: Union[str, List[Union[str, List[int]]]]
@@ -126,8 +125,10 @@ class Embedding(Worker):
 
 
 if __name__ == "__main__":
+    MAX_BATCH_SIZE = int(os.environ.get("MAX_BATCH_SIZE", 128))
+    MAX_WAIT_TIME = int(os.environ.get("MAX_WAIT_TIME", 10))
     server = Server()
-    emb = Runtime(Embedding, max_batch_size=16, max_wait_time=10)
+    emb = Runtime(Embedding, max_batch_size=MAX_BATCH_SIZE, max_wait_time=MAX_WAIT_TIME)
     server.register_runtime(
         {
             "/v1/embeddings": [emb],
