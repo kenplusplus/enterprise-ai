@@ -22,3 +22,9 @@
 [submodule "xim/meeting-summary"]
 	path = xim/meeting-summary
 	url = https://github.com/kenplusplus/meeting-summary-server
+[submodule "externals/opea/GenAIComps"]
+	path = externals/opea/GenAIComps
+	url = https://github.com/opea-project/GenAIComps.git
+[submodule "externals/opea/GenAIInfra"]
+	path = externals/opea/GenAIInfra
+	url = https://github.com/opea-project/GenAIInfra.git
