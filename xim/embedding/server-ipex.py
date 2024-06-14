@@ -60,7 +60,7 @@ class Embedding(Worker):
             sentences, padding=True, truncation=True, return_tensors="pt"
         )
         inputs = encoded_input.to(self.device)
-        token_count = inputs["attention_mask"].sum(dim=1).tolist()[0]
+        token_count = inputs["attention_mask"].sum(dim=1).tolist()
         # Compute token embeddings
         model_output = self.model(**inputs)
         # Perform pooling
@@ -76,44 +76,58 @@ class Embedding(Worker):
     def serialize(self, data: EmbeddingResponse) -> bytes:
         return data.to_json()
 
-    def forward(self, data: EmbeddingRequest) -> EmbeddingResponse:
-        if data.model != self.model_name:
-            raise ClientError(
-                f"the requested model {data.model} is not supported by "
-                f"this worker {self.model_name}"
-            )
-        token_count, embeddings = self.get_embedding_with_token_count(data.input)
+    def forward(self, data: List[EmbeddingRequest]) -> List[EmbeddingResponse]:
+        inputs = []
+        inputs_lens = []
+        for d in data:
+            inputs.extend(d.input if isinstance(d.input, list) else [d.input])
+            inputs_lens.append(len(d.input) if isinstance(d.input, list) else 1)
+        #if data.model != self.model_name:
+        #    raise ClientError(
+        #        f"the requested model {data.model} is not supported by "
+        #        f"this worker {self.model_name}"
+        #    )
+        token_cnt, embeddings = self.get_embedding_with_token_count(inputs)
+
         embeddings = embeddings.detach()
         if self.device != "cpu":
             embeddings = embeddings.cpu()
         embeddings = embeddings.numpy()
-        if data.encoding_format == "base64":
-            embeddings = [
-                base64.b64encode(emb.astype(np.float32).tobytes()).decode("utf-8")
-                for emb in embeddings
-            ]
-        else:
-            embeddings = [emb.tolist() for emb in embeddings]
+        #if data.encoding_format == "base64":
+        #    embeddings = [
+        #        base64.b64encode(emb.astype(np.float32).tobytes()).decode("utf-8")
+        #        for emb in embeddings
+        #    ]
+        #else:
+        #    embeddings = [emb.tolist() for emb in embeddings]
+        embeddings = [emb.tolist() for emb in embeddings]
 
-        resp = EmbeddingResponse(
-            data=[
-                EmbeddingData(embedding=emb, index=i)
-                for i, emb in enumerate(embeddings)
-            ],
-            model=self.model_name,
-            usage=TokenUsage(
-                prompt_tokens=token_count,
-                # No completions performed, only embeddings generated.
-                completion_tokens=0,
-                total_tokens=token_count,
-            ),
-        )
+        resp = []
+        emb_idx = 0
+        for lens in inputs_lens:
+            token_count = sum(token_cnt[emb_idx:emb_idx+lens])
+            resp.append(
+                EmbeddingResponse(
+                    data=[
+                        EmbeddingData(embedding=emb, index=i)
+                        for i, emb in enumerate(embeddings[emb_idx:emb_idx+lens])
+                    ],
+                    model=self.model_name,
+                    usage=TokenUsage(
+                        prompt_tokens=token_count,
+                        # No completions performed, only embeddings generated.
+                        completion_tokens=0,
+                        total_tokens=token_count,
+                    ),
+                )
+            )
+            emb_idx += lens
         return resp
 
 
 if __name__ == "__main__":
     server = Server()
-    emb = Runtime(Embedding)
+    emb = Runtime(Embedding, max_batch_size=16, max_wait_time=10)
     server.register_runtime(
         {
             "/v1/embeddings": [emb],
