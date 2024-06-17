@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:key="url"
+        android:title="URL"
+        android:summary="Current URL: %s"
+        android:inputType="textUri"
+        android:defaultValue="http://101.201.111.141:8000/v1/chat/completions" />
+    <EditTextPreference
+        android:key="model_name"
+        android:title="Model Name"
+        android:summary="Current model name: %s"
+        android:inputType="text"
+        android:defaultValue="chatglm2-6b" />
+    <EditTextPreference
+        android:key="api_key"
+        android:title="API Key"
+        android:summary="Current API key: %s"
+        android:inputType="text"
+        android:defaultValue="" />
+    <EditTextPreference
+        android:key="max_tokens"
+        android:title="Max Tokens"
+        android:summary="Current max tokens: %s"
+        android:inputType="number"
+        android:defaultValue="512" />
+</PreferenceScreen>
