@@ -31,3 +31,6 @@
 [submodule "externals/opea/GenAIEval"]
 	path = externals/opea/GenAIEval
 	url = https://github.com/opea-project/GenAIEval.git
+[submodule "test/llm-streaming-concurrent-test"]
+	path = test/llm-streaming-concurrent-test
+	url = https://github.com/kenplusplus/llm-streaming-concurrency-test.git
