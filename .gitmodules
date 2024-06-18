@@ -28,3 +28,6 @@
 [submodule "externals/opea/GenAIInfra"]
 	path = externals/opea/GenAIInfra
 	url = https://github.com/opea-project/GenAIInfra.git
+[submodule "externals/opea/GenAIEval"]
+	path = externals/opea/GenAIEval
+	url = https://github.com/opea-project/GenAIEval.git
