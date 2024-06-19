@@ -5,6 +5,7 @@ RUN apt update && apt install -y numactl
 # install required python packages
 RUN pip install modelscope torchaudio onnxruntime funasr_onnx torch_complex omegaconf kaldiio librosa hydra-core funasr jieba fastapi
 RUN pip install -U rotary_embedding_torch
+RUN pip install numpy==1.26.4
 
 # Download required models
 RUN python -c 'from modelscope import snapshot_download; \
