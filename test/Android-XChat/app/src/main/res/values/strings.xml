@@ -1,4 +1,23 @@
 <resources>
     <string name="app_name">XChat</string>
     <string name="message">Message</string>
+
+    <string name="str_server">Server</string>
+    <string name="str_port">Port</string>
+    <string name="str_model_name">Model Name</string>
+    <string name="str_api_key">API Key</string>
+    <string name="str_max_tokens">Max Tokens</string>
+    <string name="str_temperature">Temperature</string>
+    <string name="str_top_p">Top P</string>
+    <string name="str_top_k">Top K</string>
+    <string name="str_rep_penalty">Repetition Penalty</string>
+    <string name="str_current_value">Current Value</string>
+
+    <string name="tip_max_tokens">Max tokens to generate for each request.</string>
+    <string name="tip_temperature">Controls the randomness of the sampling. Lower values make the model more deterministic, while higher values make the model more random. Zero means greedy sampling.</string>
+    <string name="tip_top_p">Controls the cumulative probability of the top tokens to consider. Must be in (0, 1]. Set to 1 to consider all tokens.</string>
+    <string name="tip_top_k">Controls the number of top tokens to consider.</string>
+    <string name="tip_repetition_penalty">Penalizes new tokens based on whether they appear in the prompt and the generated text so far. Values &gt;1 encourage the model to use new tokens, while values &lt;1 encourage the model to repeat tokens.</string>
+    <string name="tip_chat_history">How many rounds of chat history are included.</string>
+    <string name="tip_system_prompt">Predefined instruction given to the model that sets the context and behavior for the interaction. For example: You are a helpful assistant.</string>
 </resources>

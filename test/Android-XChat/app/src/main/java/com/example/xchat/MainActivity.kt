@@ -1,7 +1,6 @@
 package com.example.xchat
 
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -10,12 +9,9 @@ import android.view.View
 import android.widget.EditText
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
-import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ItemAnimator
-import androidx.recyclerview.widget.SimpleItemAnimator
 import okhttp3.Call
 import okhttp3.Callback
 import okhttp3.MediaType.Companion.toMediaType
@@ -33,13 +29,19 @@ import java.io.InputStreamReader
 
 
 class MainActivity : AppCompatActivity() {
-    private var messages: ArrayList<Message>? = null
+    private var messages: ArrayList<Message> = ArrayList()
     private var recyclerView: RecyclerView? = null
     private var adapter: RecyclerAdapter? = null
     private var sendButton: ImageButton? = null
     private var msgInput: EditText? = null
 
     private var settings: ChatSettings? = null
+
+    // If user scrolls, don't scroll to the bottom
+    private var isUserScrolling = false
+
+    // List of HTTP clients
+    private var httpClients: ArrayList<OkHttpClient> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,16 +56,24 @@ class MainActivity : AppCompatActivity() {
         // Set an animation
         recyclerView?.setItemAnimator(DefaultItemAnimator())
 
-        messages = ArrayList()
-        adapter = RecyclerAdapter(messages)
+        adapter = RecyclerAdapter(messages, baseContext)
         adapter?.setHasStableIds(true)
 
         // Make screen not flash
-        val animator: ItemAnimator? = recyclerView?.itemAnimator
-        if (animator is SimpleItemAnimator) {
-            animator.supportsChangeAnimations = false
-        }
+//        val animator: ItemAnimator? = recyclerView?.itemAnimator
+//        if (animator is SimpleItemAnimator) {
+//            animator.supportsChangeAnimations = false
+//        }
         recyclerView?.setItemAnimator(null)
+
+        recyclerView?.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                super.onScrollStateChanged(recyclerView, newState)
+                if (newState == RecyclerView.SCROLL_STATE_DRAGGING) {
+                    isUserScrolling = true
+                }
+            }
+        })
 
 
         recyclerView?.setAdapter(adapter)
@@ -73,12 +83,13 @@ class MainActivity : AppCompatActivity() {
         sendButton!!.setOnClickListener {
             val message = msgInput!!.getText().toString()
             if (message.isNotEmpty()) {
-                messages!!.add(Message(true, message))
-                val newPosition = messages!!.size - 1
+                val newPosition = messages.size - 1
                 adapter!!.notifyItemInserted(newPosition)
                 recyclerView?.scrollToPosition(newPosition)
                 msgInput!!.setText("")
+                isUserScrolling = false
                 sendChatRequest(message)
+                messages.add(Message(true, message))
             }
         }
     }
@@ -86,24 +97,8 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
 
-        // Get SharedPreferences
-        val sharedPreferences: SharedPreferences =
-            PreferenceManager.getDefaultSharedPreferences(this)
-
-        // Retrieve values from SharedPreferences
-        val url =
-            sharedPreferences.getString("url", "http://101.201.111.141:8000/v1/chat/completions")
-        val modelName = sharedPreferences.getString("model_name", "chatglm2-6b")
-        val apiKey = sharedPreferences.getString("api_key", "")
-        val maxTokensString = sharedPreferences.getString("max_tokens", "512")
-        val maxTokens = try {
-            maxTokensString!!.toInt()
-        } catch (e: NumberFormatException) {
-            512
-        }
-
         // Create a Settings object
-        settings = ChatSettings(url, modelName, apiKey, maxTokens)
+        settings = ChatSettings.fromPreferences(this);
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -116,28 +111,67 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SettingsActivity::class.java)
             startActivity(intent)
             return true
+        } else if (item.itemId == R.id.action_clear) {
+            for (client in httpClients) {
+                client.dispatcher.cancelAll()
+            }
+            messages.clear()
+            adapter?.notifyDataSetChanged()
         }
         return super.onOptionsItemSelected(item)
     }
 
+    private fun composeMessage(message: String): JSONArray {
+        val historyRounds = settings!!.historyRounds
+        val systemPrompt = settings!!.systemPrompt
+
+        val promptArray = JSONArray()
+        val promptSystem = JSONObject()
+        promptSystem.put("role", "system")
+        promptSystem.put("content", systemPrompt)
+        promptArray.put(promptSystem)
+
+        val offset: Int = if (messages.size > historyRounds * 2) messages.size - historyRounds * 2 else 0
+        var i = offset
+        while (i < messages.size) {
+            val msg = messages[i]
+            if (msg.isFromUser) {
+                val promptObject = JSONObject()
+                promptObject.put("role", "user")
+                promptObject.put("content", msg.message)
+                promptArray.put(promptObject)
+            } else {
+                val promptObject = JSONObject()
+                promptObject.put("role", "assistant")
+                promptObject.put("content", msg.message)
+                promptArray.put(promptObject)
+            }
+            i += 1
+        }
+
+        val promptObject = JSONObject()
+        promptObject.put("role", "user")
+        promptObject.put("content", message)
+        promptArray.put(promptObject)
+        return promptArray
+    }
+
     private fun sendChatRequest(message: String) {
         val client = OkHttpClient()
-        val url = settings!!.url
+        httpClients.add(client)
 
         // Create a JSONObject and put the values into it
         val json = JSONObject()
         try {
             json.put("model", settings!!.modelName)
-
-            val promptArray = JSONArray()
-            val promptObject = JSONObject()
-            promptObject.put("role", "user")
-            promptObject.put("content", message)
-            promptArray.put(promptObject)
-            json.put("messages", promptArray)
+            json.put("messages", composeMessage(message))
 
             json.put("max_tokens", settings!!.maxTokens)
-            json.put("temperature", 0)
+            json.put("temperature", settings!!.temperature)
+            json.put("top_p", settings!!.topP)
+            json.put("top_k", settings!!.topK)
+            json.put("repetition_penalty", settings!!.penalty)
+
             json.put("stream", true)
         } catch (e: JSONException) {
             onReply("Request failed: " + e.message)
@@ -149,7 +183,7 @@ class MainActivity : AppCompatActivity() {
         val body: RequestBody =
             jsonString.toRequestBody("application/json; charset=utf-8".toMediaType())
         val builder = Request.Builder()
-            .url(url)
+            .url(settings!!.url)
             .post(body)
         if (settings!!.apiKey != null) {
             builder.addHeader("Authorization", "Bearer " + settings!!.apiKey)
@@ -196,6 +230,7 @@ class MainActivity : AppCompatActivity() {
                             }
                         }
                     } // end while
+                    httpClients.remove(client)
                 }
             }
         })
@@ -204,15 +239,18 @@ class MainActivity : AppCompatActivity() {
     // isFirst: first token/word or not
     private fun onReply(reply: String, position: Int = -1): Int {
         return if (position == -1) {
-            messages!!.add(Message(false, reply))
-            val newPosition = messages!!.size - 1
+            messages.add(Message(false, reply))
+            val newPosition = messages.size - 1
             adapter!!.notifyItemInserted(newPosition)
-            recyclerView!!.scrollToPosition(newPosition)
+            if (!isUserScrolling) recyclerView!!.scrollToPosition(newPosition)
             newPosition
         } else {
-            messages?.get(position)?.message = reply
+            // No message at the given position (maybe cleared)
+            if (messages.size <= position) return position
+
+            messages[position].message = reply
             adapter!!.notifyItemChanged(position)
-            recyclerView!!.scrollToPosition(position)
+            if (!isUserScrolling) recyclerView!!.scrollToPosition(position)
             position
         }
     }

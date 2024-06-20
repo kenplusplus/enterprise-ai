@@ -1,27 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <EditTextPreference
-        android:key="url"
-        android:title="URL"
-        android:summary="Current URL: %s"
-        android:inputType="textUri"
-        android:defaultValue="http://101.201.111.141:8000/v1/chat/completions" />
-    <EditTextPreference
-        android:key="model_name"
-        android:title="Model Name"
-        android:summary="Current model name: %s"
-        android:inputType="text"
-        android:defaultValue="chatglm2-6b" />
-    <EditTextPreference
-        android:key="api_key"
-        android:title="API Key"
-        android:summary="Current API key: %s"
-        android:inputType="text"
-        android:defaultValue="" />
-    <EditTextPreference
-        android:key="max_tokens"
-        android:title="Max Tokens"
-        android:summary="Current max tokens: %s"
-        android:inputType="number"
-        android:defaultValue="512" />
+    <PreferenceCategory android:title="Server Settings">
+        <EditTextPreference
+            android:defaultValue="101.201.111.141"
+            android:inputType="textUri"
+            android:key="ip_address"
+            android:summary="Current address: %s"
+            android:title="Server Address (IP or name)" />
+
+        <EditTextPreference
+            android:defaultValue="8000"
+            android:inputType="number"
+            android:key="port"
+            android:summary="Current port: %s"
+            android:title="Port" />
+
+        <EditTextPreference
+            android:defaultValue="chatglm2-6b"
+            android:inputType="text"
+            android:key="model_name"
+            android:summary="Current model name: %s"
+            android:title="Model Name" />
+
+        <EditTextPreference
+            android:defaultValue=""
+            android:inputType="text"
+            android:key="api_key"
+            android:summary="Current API key: %s"
+            android:title="API Key" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Token Generation Settings">
+        <EditTextPreference
+            android:defaultValue="512"
+            android:inputType="number"
+            android:key="max_tokens"
+            android:summary="Current max tokens: %s"
+            android:title="Max Tokens" />
+
+        <EditTextPreference
+            android:defaultValue="0.9"
+            android:inputType="numberDecimal"
+            android:key="temperature"
+            android:summary="Current temperature: %s"
+            android:title="Temperature" />
+
+        <EditTextPreference
+            android:defaultValue="0.9"
+            android:inputType="numberDecimal"
+            android:key="top_p"
+            android:summary="Current top p: %s"
+            android:title="Top P" />
+
+        <EditTextPreference
+            android:defaultValue="20"
+            android:inputType="number"
+            android:key="top_k"
+            android:summary="Current top k: %s"
+            android:title="Top K" />
+
+        <EditTextPreference
+            android:defaultValue="1.0"
+            android:inputType="numberDecimal"
+            android:key="repetition_penalty"
+            android:summary="Current repetition penalty: %s"
+            android:title="Repetition Penalty" />
+
+        <com.example.xchat.LimitedEditTextPreference
+            android:defaultValue="3"
+            android:inputType="number"
+            android:key="chat_history"
+            android:title="Chat History" />
+
+        <EditTextPreference
+            android:defaultValue="你是一个运行在Intel至强平台上由xFasterTransformer推理框架部署的AI小助手。"
+            android:inputType="text"
+            android:key="system_prompt"
+            android:title="System Prompt" />
+    </PreferenceCategory>
 </PreferenceScreen>

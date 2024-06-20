@@ -1,7 +1,7 @@
 package com.example.xchat;
 
 public class Message {
-    // Type 0 for sent, 1 for received
+    // true is from user
     private boolean type;
     // Message content
     private String message;
@@ -25,5 +25,9 @@ public class Message {
 
     public void setType(boolean type) {
         this.type = type;
+    }
+
+    public boolean isFromUser() {
+        return type;
     }
 }
